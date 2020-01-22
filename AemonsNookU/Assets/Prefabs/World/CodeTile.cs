@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class CodeTile 
 {
 
     // Remember: A Tile is not a prefab. It's just a C# class,
@@ -22,10 +22,13 @@ public class Tile : MonoBehaviour
     public bool isBuilding { get; set; }
     public bool isPath { get; set; }
 
-    public Tile TileAbove { get; set; }
-    public Tile TileRight { get; set; }
-    public Tile TileBelow { get; set; }
-    public Tile TileLeft { get; set; }
+    public CodeTile TileAbove { get; set; }
+    public CodeTile TileRight { get; set; }
+    public CodeTile TileBelow { get; set; }
+    public CodeTile TileLeft { get; set; }
+
+    private Type _type { get; set; }
+    public Type TileType { get { return _type; } set { _type = value; } }
 
     private void Awake()
     {
@@ -47,7 +50,7 @@ public class Tile : MonoBehaviour
 
     public void UpdateTileType(Type t)
     {
-
+        TileType = t;
     }
 
 
