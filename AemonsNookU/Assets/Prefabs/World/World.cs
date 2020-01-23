@@ -44,6 +44,8 @@ public class World : MonoBehaviour
     public Tilemap topMap;
     public Tilemap midMap;
     public Tilemap botMap;
+
+    public PeepGenerator peepGenerator { get; set; }
     #endregion
 
 
