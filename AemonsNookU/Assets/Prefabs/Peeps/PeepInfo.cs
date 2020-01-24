@@ -102,4 +102,20 @@ public static class PeepInfo
         }
     }
 
+
+
+    public static string GetRandomName(string[] listNames)
+    {
+        int index = Random.Range(0, listNames.Length);
+        return listNames[index];
+    }
+
+    public static string[] FNAMES_MALE = { "Merek", "Carac", "Ulric", "Tybalt", "Borin", "Sadon", "Terrowin", "Rowan", "Forthwind", "Fendrel", "Brom", "Hadrian", "Walter", "Earl", "John", "Oliver", "Justice", "Clifton", "Walter", "Roger", "Joseph", "Geoffrey", "William", "Francis", "Simon", "John", "William", "Edmund", "Charles", "Benedict", "Gregory", "Peter", "Henry", "Frederick", "Walter", "Thomas", "Arthur", "Bryce", "Donald", "Letholdus", "Lief", "Barda", "Rulf", "Robin", "Gavin", "Terrin", "Ronald", "Jarin", "Cassius", "Leo", "Cedric", "Gavin", "Peyton", "Josef", "Doran", "Asher", "Quinn", "Zane  ", "Destrian", "Dain", "Falk", "Berinon", "Tristan", "Gorvenal" };
+    public static string[] FNAMES_FEMALE = {"Alys", "Ayleth", "Anastas", "Alianor", "Cedany", "Ellyn", "Helen", "Eliose", "Peronell", "Sibyl", "Esme", "Thea", "Jacquelyn", "Amelia", "Gloriana", "Bess", "Catherine", "Anne", "Mary", "Arabella", "Elizabeth", "Hildegard", "Brunhild", "Adelaide", "Alice", "Beatrix", "Cristiana", "Eleanor", "Emeline", "Isabel", "Juliana", "Margaret", "Matilda", "Mirabelle", "Rose", "Helena", "Guinevere", "Isolde", "Maerwynn", "Muriel", "Winifred", "Godiva", "Catrain", "Jasmine", "Josselyn", "Maria", "Victoria", "Gwendolynn", "Janet", "Luanda", "Atheena", "Dimia", "Phrowenia", "Aleida", "Ariana", "Alexia", "Katelyn", "Katrina", "Loreena", "Kaylein", "Seraphina", "Duraina", "Ryia", "Farfelee", "Benevolence", "Brangian", "Elspeth"};
+    public static string[] SIRNAMES_COMMON = {"Mason", "Carpenter", "Cheeseman", "Cook", "Fisher", "Fletcher", "Forester", "Shepherd", "Baker", "Wood", "Belcher", "Meeger", "Potter", "Wrinkle", "Plump"};
+    public static string[] SIRNAMES_MIDDLE = {"Braun", "Baxter", "Bennett", "Granger", "Hayward", "Lister", "Mannering", "Sawyer", "Ward", "Webb", "Wright", "Williams", "McCloy", "Duncan"};
+    public static string[] SIRNAMES_ROYAL = {"Nook", "Bonaparte", "Valentine", "Wales", "Windsor", "Hanover", "Grimm"};
+    public static string[] TITLES_MALE = {"Mountain", "Rock", "Quick and Nimble", "Rich in Wisdom", "Swift as the Wind", "Slayer of Dragons"};
+    public static string[] TITLES_FEMALE = {"Bringer of Joy", "Fairest of Ladies", "Envy of the North", "Delicate as Rain", "Blossom of Peace"};
+
 }
