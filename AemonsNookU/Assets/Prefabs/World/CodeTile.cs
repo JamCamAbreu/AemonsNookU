@@ -14,6 +14,9 @@ public class CodeTile
         grass,
         road,
         water,
+        tree,
+        stone,
+        building
     }
 
     /// Properties
@@ -21,6 +24,10 @@ public class CodeTile
     public int posY { get; set; }
     public bool isBuilding { get; set; }
     public bool isPath { get; set; }
+
+    // Edge:
+    public bool isMapEdge { get; set; }
+    public int mapEdgeId { get; set; }
 
     public CodeTile TileAbove { get; set; }
     public CodeTile TileRight { get; set; }
@@ -30,22 +37,12 @@ public class CodeTile
     private Type _type { get; set; }
     public Type TileType { get { return _type; } set { _type = value; } }
 
-    private void Awake()
+    public CodeTile()
     {
         isBuilding = false;
         isPath = false;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        isMapEdge = false;
+        mapEdgeId = -1;
     }
 
     public void UpdateTileType(Type t)

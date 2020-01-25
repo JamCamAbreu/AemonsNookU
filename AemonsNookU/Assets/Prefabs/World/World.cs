@@ -18,10 +18,8 @@ public class World : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ClearTiles();
-        CodeTilesInit();
-        TilesInit();
-        
+        Level test = new Level01();
+        LoadLevel(test);
     }
 
     // Update is called once per frame
@@ -37,6 +35,21 @@ public class World : MonoBehaviour
     public int WorldWidth;
     public int WorldHeight;
     private CodeTile[][] WorldTiles;
+    public Camera cameraPrefab;
+    public CameraScript cameraScript
+    {
+        get
+        {
+            if (cameraPrefab != null)
+            {
+                return cameraPrefab.GetComponent<CameraScript>();
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 
     private bool codeTilesReady = false;
 
@@ -96,8 +109,102 @@ public class World : MonoBehaviour
 
 
 
+
+    // --------------- LEVEL -----------------
+    #region LEVEL
+    public void LoadLevel(Level lev)
+    {
+        WorldHeight = lev.HEIGHT;
+        WorldWidth = lev.WIDTH;
+        cameraScript.MapHeight = lev.HEIGHT;
+        cameraScript.MapWidth = lev.WIDTH;
+
+        ClearTiles();
+        CodeTilesInit();
+        TileMapUpdate();
+
+        //WorldTiles[0][3].UpdateTileType(CodeTile.Type.water); // test
+
+        string levelCode = lev.GetLevelCode();
+        LoadTileTypesFromLevel(levelCode);
+        TileMapUpdate();
+    }
+
+    public void LoadTileTypesFromLevel(string input)
+    {
+        int i = 0;
+        char c;
+        for (int row = WorldHeight - 1; row >= 0; row--)
+        {
+            for (int col = 0; col < WorldWidth; col++)
+            {
+                c = input[i];
+                SetTileTypeFromChar(row, col, c);
+                i++;
+            }
+        }
+    }
+
+    private void SetTileTypeFromChar(int row, int col, char c)
+    {
+        CodeTile curTile = WorldTiles[row][col];
+        switch (c)
+        {
+            case 'T':
+                curTile.UpdateTileType(CodeTile.Type.tree);
+                break;
+
+            case 'S':
+                curTile.UpdateTileType(CodeTile.Type.stone);
+                break;
+
+            case 'W':
+                curTile.UpdateTileType(CodeTile.Type.water);
+                break;
+
+            case 'D':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                break;
+
+            case '1':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isMapEdge = true;
+                curTile.mapEdgeId = 1;
+                break;
+
+            case '2':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isMapEdge = true;
+                curTile.mapEdgeId = 2;
+                break;
+
+            case '3':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isMapEdge = true;
+                curTile.mapEdgeId = 3;
+                break;
+
+            case '4':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isMapEdge = true;
+                curTile.mapEdgeId = 4;
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    #endregion
+
+
+
+
     // --------------- SYSTEM -----------------
     #region SYSTEM
+
+
+
     private void DeleteCodeTiles()
     {
         codeTilesReady = false;
@@ -211,7 +318,7 @@ public class World : MonoBehaviour
         SetTopMapTile(xPos, yPos, type);
     }
 
-    private void TilesInit()
+    private void TileMapUpdate()
     {
         if (codeTilesReady)
         {
@@ -221,13 +328,16 @@ public class World : MonoBehaviour
                 for (int w = 0; w < WorldWidth; w++)
                 {
                     curTile = WorldTiles[h][w];
-                    Debug.Log($"Setting tile as position ({w},{h}) with type={curTile.TileType}");
                     SetTileMapTile(w, h, curTile.TileType);
                 }
             }
         }
     }
+    #endregion
 
+
+    // --------------- CAMERA -----------------
+    #region CAMERA
 
     #endregion
 

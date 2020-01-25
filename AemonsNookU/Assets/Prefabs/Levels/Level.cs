@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public abstract class Level
@@ -12,6 +13,6 @@ public abstract class Level
 
     public string GetLevelCode()
     {
-        return ascii.Replace(" ", "").Replace("\n", "");
+        return Regex.Replace(ascii, @"\s+", "");
     }
 }
