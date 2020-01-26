@@ -33,6 +33,7 @@ public class CodeTile
     public CodeTile TileRight { get; set; }
     public CodeTile TileBelow { get; set; }
     public CodeTile TileLeft { get; set; }
+    public List<Clickable> Resources = new List<Clickable>();
 
     private Type _type { get; set; }
     public Type TileType { get { return _type; } set { _type = value; } }

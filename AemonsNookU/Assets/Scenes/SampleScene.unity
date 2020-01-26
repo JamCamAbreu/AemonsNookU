@@ -136,12 +136,12 @@ PrefabInstance:
     - target: {fileID: 1919114810608129327, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: m_CellSize.x
-      value: 0.32
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1919114810608129327, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: m_CellSize.y
-      value: 0.32
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2067009687743385776, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
@@ -168,6 +168,16 @@ PrefabInstance:
       propertyPath: cameraPrefab
       value: 
       objectReference: {fileID: 1025594787}
+    - target: {fileID: 5302388668651933514, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: panSpeed
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302388668651933514, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: scrollSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6367600802512607216, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: m_Name

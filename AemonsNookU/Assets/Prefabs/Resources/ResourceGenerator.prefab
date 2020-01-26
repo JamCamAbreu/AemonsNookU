@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7132033950330078862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6711379901336636849}
+  - component: {fileID: 2321000123599637286}
+  m_Layer: 0
+  m_Name: ResourceGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6711379901336636849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132033950330078862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2321000123599637286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132033950330078862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fe41a2322803a45a15c6329d7b8917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickTree: {fileID: 2836239748471983211, guid: f7d0b3656cebe094781c8e2017f958b7,
+    type: 3}
+  Tree1: {fileID: 21300000, guid: f1cff16414bb0d946bea4e4f70d7b6b8, type: 3}
+  Tree2: {fileID: 21300000, guid: 5dbd1dc9290dedd4ba2e364b1ec1f840, type: 3}
+  Tree3: {fileID: 21300000, guid: 99d7815880ad4a94d98244ca901643a9, type: 3}
+  Tree4: {fileID: 21300000, guid: 4b83968d6f71fb64ea5a60f04b5ca9e4, type: 3}
+  Tree5: {fileID: 21300000, guid: 0d13e54864ffbbc409bcee1ec448cc18, type: 3}
+  Tree6: {fileID: 21300000, guid: 32631c14c1997624ab61c9aeaab8ee6f, type: 3}
+  ClickStone: {fileID: -8937599909261352553, guid: a22971173ee711a4aa8b043b1ce20441,
+    type: 3}
+  Stone1: {fileID: 21300000, guid: 4ca8b2bf74871f14191639e0efc170f0, type: 3}
+  Stone2: {fileID: 21300000, guid: e820c68288c5e2341a8056d424f232fa, type: 3}
+  Stone3: {fileID: 21300000, guid: 0dee354c97ce9b1498a370acd404be51, type: 3}
+  Stone4: {fileID: 21300000, guid: 91d2a197353141a49bcbdad975155407, type: 3}
+  Stone5: {fileID: 21300000, guid: 31046307abecafc4b889eef06e1c8b56, type: 3}
+  Stone6: {fileID: 21300000, guid: 2628b9e1f6da6a6478539b92adcfb6b2, type: 3}

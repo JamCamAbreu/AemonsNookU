@@ -35,6 +35,12 @@ public class World : MonoBehaviour
     public int WorldWidth;
     public int WorldHeight;
     private CodeTile[][] WorldTiles;
+
+    public ResourceGenerator resourceGenerator;
+    private List<CodeTile> TreeTiles = new List<CodeTile>();
+    private List<CodeTile> StoneTiles = new List<CodeTile>();
+    private List<CodeTile> RoadTiles = new List<CodeTile>();
+
     public Camera cameraPrefab;
     public CameraScript cameraScript
     {
@@ -82,6 +88,11 @@ public class World : MonoBehaviour
     #region NATURE
     public void GrowTrees()
     {
+        foreach (CodeTile t in TreeTiles)
+        {
+            Clickable tree = resourceGenerator.GenerateTree(t.posX, t.posY);
+            t.Resources.Add(tree);
+        }
     }
     #endregion
 
@@ -127,7 +138,11 @@ public class World : MonoBehaviour
 
         string levelCode = lev.GetLevelCode();
         LoadTileTypesFromLevel(levelCode);
+        GrowTrees();
+
         TileMapUpdate();
+
+
     }
 
     public void LoadTileTypesFromLevel(string input)
@@ -152,10 +167,12 @@ public class World : MonoBehaviour
         {
             case 'T':
                 curTile.UpdateTileType(CodeTile.Type.tree);
+                TreeTiles.Add(curTile);
                 break;
 
             case 'S':
                 curTile.UpdateTileType(CodeTile.Type.stone);
+                StoneTiles.Add(curTile);
                 break;
 
             case 'W':
@@ -164,30 +181,35 @@ public class World : MonoBehaviour
 
             case 'D':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                RoadTiles.Add(curTile);
                 break;
 
             case '1':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 1;
+                RoadTiles.Add(curTile);
                 break;
 
             case '2':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 2;
+                RoadTiles.Add(curTile);
                 break;
 
             case '3':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 3;
+                RoadTiles.Add(curTile);
                 break;
 
             case '4':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 4;
+                RoadTiles.Add(curTile);
                 break;
 
             default:
