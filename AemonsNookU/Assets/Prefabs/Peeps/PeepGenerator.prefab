@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5048048787294541621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6454245429732135439}
+  - component: {fileID: 8800670331461594517}
+  m_Layer: 0
+  m_Name: PeepGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6454245429732135439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048048787294541621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.883288, y: 2.38125, z: -9.287208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8800670331461594517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048048787294541621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9dd5231d7dd042a3fc68e05d0bbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Aqua: {fileID: 21300000, guid: 445c2d1eb99317e47bfb4d70b4737ff8, type: 3}
+  Armor: {fileID: 21300000, guid: cf691d2ff5fad4940b80e861d7aeb0da, type: 3}
+  Blue: {fileID: 21300000, guid: 421549d9fed042349be618d60a9989aa, type: 3}
+  Brown: {fileID: 21300000, guid: ea3382d8b17eddd409d34611b59518b4, type: 3}
+  Green: {fileID: 21300000, guid: a14f40847ee608d4fac0ad43cbb226b2, type: 3}
+  Grey: {fileID: 21300000, guid: c91ee11ad07a16c4fb34c07dd64ddcd1, type: 3}
+  Purple: {fileID: 21300000, guid: fb4510b417e0d43449d48b46d95dad0d, type: 3}
+  Red: {fileID: 21300000, guid: 42be38aae8d7f3a4dafcafba9f64a5b4, type: 3}
+  Royal: {fileID: 21300000, guid: 9f83b7c87b52f484096c174610f5c166, type: 3}
+  White: {fileID: 21300000, guid: cc23d2283d9b7de46ba344ac651b2335, type: 3}
+  CreationAlarmReset: 100
+  CreationAlarm: 20
+  peepPrefab: {fileID: 412669261171186849, guid: 18b507728bd555e4e8c3ac11d621d08b,
+    type: 3}
+  Started: 1

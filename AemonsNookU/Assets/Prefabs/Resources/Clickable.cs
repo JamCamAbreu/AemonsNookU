@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
-
-    public SpriteRenderer rend 
-    {
-        get
-        {
-            return this.GetComponent<SpriteRenderer>();
-        }
-    }
+    public SpriteRenderer rend { get { return this.GetComponent<SpriteRenderer>(); } }
 
 
     // Start is called before the first frame update

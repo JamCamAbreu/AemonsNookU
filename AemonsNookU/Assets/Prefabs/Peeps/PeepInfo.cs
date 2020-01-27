@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class PeepInfo
 {
+    // 18 total types
     public enum Type
     {
         homeless,
@@ -35,19 +36,52 @@ public static class PeepInfo
     public static void UpdatePeepType(Peep p, Type t)
     {
         p.Type = t;
+        p.Sex = GenerateSex(t);
         p.Fame = GenerateFame(t);
-        p.FirstName = GenerateFirstName(t);
-        p.SirName = GenerateSirname(t);
+        p.FirstName = GenerateFirstName(p.Sex);
+        p.SirName = GenerateSirname(p.Fame);
+        p.FatiguePoints = GenerateFatigue(t, p.Sex);
+        p.Age = GenerateAge(t);
     }
 
-
-    public static string GenerateFirstName(Type t)
+    public static int GenerateFatigue(Type t, Sex s)
     {
-        return "todo";
+        // todo
+        return 100;
     }
-    public static string GenerateSirname(Type t)
+
+    public static int GenerateAge(Type t)
     {
-        return "todo";
+        // todo
+        return Random.Range(1, 60);
+    }
+
+    public static string GenerateFirstName(Sex s)
+    {
+        switch (s)
+        {
+            case Sex.female:
+                return GetRandomName(FNAMES_FEMALE);
+            case Sex.male:
+                return GetRandomName(FNAMES_MALE);
+            default:
+                return GetRandomName(FNAMES_MALE);
+        }
+    }
+    public static string GenerateSirname(int fame)
+    {
+        if (fame < 8)
+        {
+            return GetRandomName(SIRNAMES_COMMON);
+        }
+        else if (fame >= 8 && fame < 13)
+        {
+            return GetRandomName(SIRNAMES_MIDDLE);
+        }
+        else
+        {
+            return GetRandomName(SIRNAMES_ROYAL);
+        }
     }
 
     public static Sex GenerateSex(Type t)
@@ -88,7 +122,7 @@ public static class PeepInfo
             case Type.bard:
                 return 13;
             case Type.quester:
-                return 14;
+                return 15;
             case Type.wizard:
                 return 16;
             case Type.bishop:

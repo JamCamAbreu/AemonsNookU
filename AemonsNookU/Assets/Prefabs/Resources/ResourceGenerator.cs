@@ -33,26 +33,63 @@ public class ResourceGenerator : MonoBehaviour
         
     }
 
-    public Clickable GenerateTree(int posX, int posY)
+    public List<Clickable> GenerateTreesPos(int posX, int posY, int min, int max)
     {
-        Clickable tree = GameObject.Instantiate(ClickTree);
-
-        int type = Random.Range(1, 6);
-        switch (type)
+        int numTrees = Random.Range(min, max);
+        List<Clickable> createdTrees = new List<Clickable>();
+        Clickable tree;
+        for (int i = 0; i < numTrees; i++)
         {
-            case 1: { tree.rend.sprite = Tree1; break; }
-            case 2: { tree.rend.sprite = Tree2; break; }
-            case 3: { tree.rend.sprite = Tree3; break; }
-            case 4: { tree.rend.sprite = Tree4; break; }
-            case 5: { tree.rend.sprite = Tree5; break; }
-            case 6: { tree.rend.sprite = Tree6; break; }
-            default: { tree.rend.sprite = Tree1; break; }
+            tree = GameObject.Instantiate(ClickTree);
+            int type = Random.Range(1, 6);
+            switch (type)
+            {
+                case 1: { tree.rend.sprite = Tree1; break; }
+                case 2: { tree.rend.sprite = Tree2; break; }
+                case 3: { tree.rend.sprite = Tree3; break; }
+                case 4: { tree.rend.sprite = Tree4; break; }
+                case 5: { tree.rend.sprite = Tree5; break; }
+                case 6: { tree.rend.sprite = Tree6; break; }
+                default: { tree.rend.sprite = Tree1; break; }
+            }
+            float offsetX = Random.Range(0.2f, 0.8f);
+            float offsetY = Random.Range(0.5f, 1.3f);
+            tree.transform.position = new Vector2(posX + offsetX,  posY + offsetY);
+            float scale = Random.Range(-0.2f, 0.2f);
+            tree.transform.localScale = new Vector3(1 + scale, 1 + scale, 1);
+            createdTrees.Add(tree);
         }
-
-        tree.transform.position = new Vector2(posX, posY);
-
-        return tree;
+        return createdTrees;
     }
 
+
+    public List<Clickable> GenerateStonesPos(int posX, int posY, int min, int max)
+    {
+        int numStones = Random.Range(min, max);
+        List<Clickable> createdStones = new List<Clickable>();
+        Clickable stone;
+        for (int i = 0; i < numStones; i++)
+        {
+            stone = GameObject.Instantiate(ClickStone);
+            int type = Random.Range(1, 6);
+            switch (type)
+            {
+                case 1: { stone.rend.sprite = Stone1; break; }
+                case 2: { stone.rend.sprite = Stone2; break; }
+                case 3: { stone.rend.sprite = Stone3; break; }
+                case 4: { stone.rend.sprite = Stone4; break; }
+                case 5: { stone.rend.sprite = Stone5; break; }
+                case 6: { stone.rend.sprite = Stone6; break; }
+                default: { stone.rend.sprite = Stone1; break; }
+            }
+            float offsetX = Random.Range(0.2f, 0.8f);
+            float offsetY = Random.Range(0.2f, 0.8f);
+            stone.transform.position = new Vector2(posX + offsetX,  posY + offsetY);
+            float scale = System.Math.Max(Random.Range(0.2f, 0.9f) - numStones, 0);
+            stone.transform.localScale = new Vector3(1 + scale, 1 + scale, 1);
+            createdStones.Add(stone);
+        }
+        return createdStones;
+    }
 
 }

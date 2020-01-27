@@ -25,6 +25,10 @@ public class World : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (peepGenerator.Started == false)
+        {
+            StartPeepGenerator();
+        }
         
     }
     #endregion
@@ -40,6 +44,7 @@ public class World : MonoBehaviour
     private List<CodeTile> TreeTiles = new List<CodeTile>();
     private List<CodeTile> StoneTiles = new List<CodeTile>();
     private List<CodeTile> RoadTiles = new List<CodeTile>();
+    private List<CodeTile> SpawnTiles = new List<CodeTile>();
 
     public Camera cameraPrefab;
     public CameraScript cameraScript
@@ -66,7 +71,7 @@ public class World : MonoBehaviour
     public Tilemap midMap;
     public Tilemap botMap;
 
-    public PeepGenerator peepGenerator { get; set; }
+    public PeepGenerator peepGenerator;
     #endregion
 
 
@@ -90,14 +95,18 @@ public class World : MonoBehaviour
     {
         foreach (CodeTile t in TreeTiles)
         {
-            Clickable tree = resourceGenerator.GenerateTree(t.posX, t.posY);
-            t.Resources.Add(tree);
+            // adds 1 to 3 trees to tile:
+            t.Resources.AddRange(resourceGenerator.GenerateTreesPos(t.posX, t.posY, 1, 3));
         }
     }
-    #endregion
 
     public void GrowStone()
     {
+        foreach (CodeTile t in StoneTiles)
+        {
+            // adds 1 to 3 trees to tile:
+            t.Resources.AddRange(resourceGenerator.GenerateStonesPos(t.posX, t.posY, 2, 4));
+        }
     }
 
     public void GrowFlowers()
@@ -110,7 +119,7 @@ public class World : MonoBehaviour
         botMap.ClearAllTiles();
         codeTilesReady = false;
     }
-
+    #endregion
 
 
     // --------------- BUILDINGS -----------------
@@ -139,6 +148,7 @@ public class World : MonoBehaviour
         string levelCode = lev.GetLevelCode();
         LoadTileTypesFromLevel(levelCode);
         GrowTrees();
+        GrowStone();
 
         TileMapUpdate();
 
@@ -188,28 +198,28 @@ public class World : MonoBehaviour
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 1;
-                RoadTiles.Add(curTile);
+                SpawnTiles.Add(curTile);
                 break;
 
             case '2':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 2;
-                RoadTiles.Add(curTile);
+                SpawnTiles.Add(curTile);
                 break;
 
             case '3':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 3;
-                RoadTiles.Add(curTile);
+                SpawnTiles.Add(curTile);
                 break;
 
             case '4':
                 curTile.UpdateTileType(CodeTile.Type.road);
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 4;
-                RoadTiles.Add(curTile);
+                SpawnTiles.Add(curTile);
                 break;
 
             default:
@@ -224,6 +234,13 @@ public class World : MonoBehaviour
 
     // --------------- SYSTEM -----------------
     #region SYSTEM
+
+    private void StartPeepGenerator()
+    {
+        peepGenerator.SpawnPoints.AddRange(SpawnTiles);
+        peepGenerator.Started = true;
+    }
+
 
 
 

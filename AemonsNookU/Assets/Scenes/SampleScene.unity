@@ -168,6 +168,12 @@ PrefabInstance:
       propertyPath: cameraPrefab
       value: 
       objectReference: {fileID: 1025594787}
+    - target: {fileID: 4580553401749904153, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: resourceGenerator
+      value: 
+      objectReference: {fileID: 2321000123599637286, guid: 6fd48811a58d2654c8bd5b6d11d84fc9,
+        type: 3}
     - target: {fileID: 5302388668651933514, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: panSpeed
