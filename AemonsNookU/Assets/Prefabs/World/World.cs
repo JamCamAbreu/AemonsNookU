@@ -29,7 +29,7 @@ public class World : MonoBehaviour
         {
             StartPeepGenerator();
         }
-        
+
     }
     #endregion
 
@@ -263,7 +263,7 @@ public class World : MonoBehaviour
         CodeTile curTile;
         for (int h = 0; h < WorldHeight; h++)
         {
-            WorldTiles[h] = new CodeTile[WorldWidth]; 
+            WorldTiles[h] = new CodeTile[WorldWidth];
             for (int w = 0; w < WorldWidth; w++)
             {
                 curTile = CodeTileInitPos(w, h);
@@ -271,7 +271,24 @@ public class World : MonoBehaviour
                 WorldTiles[h][w] = curTile;
             }
         }
+        SetTileNeighbors();
         codeTilesReady = true;
+    }
+
+    private void SetTileNeighbors()
+    {
+        CodeTile curTile;
+        for (int h = 0; h < WorldHeight; h++)
+        {
+            for (int w = 0; w < WorldWidth; w++)
+            {
+                curTile = WorldTiles[h][w];
+                if (h > 0) { curTile.TileAbove = WorldTiles[h - 1][w]; }
+                if (h < WorldHeight - 1) { curTile.TileBelow = WorldTiles[h + 1][w]; }
+                if (w > 0) { curTile.TileLeft = WorldTiles[h][w - 1]; }
+                if (w < WorldWidth - 1) { curTile.TileRight = WorldTiles[h][w + 1]; }
+            }
+        }
     }
 
 

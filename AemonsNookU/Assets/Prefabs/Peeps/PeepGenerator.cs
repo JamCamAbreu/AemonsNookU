@@ -15,7 +15,7 @@ public class PeepGenerator : MonoBehaviour
     public Sprite Royal;
     public Sprite White;
 
-    // This class will have an interface and be USED by the World class. 
+    // This class will have an interface and be USED by the World class.
     public int CreationAlarmReset;
     public int CreationAlarm;
     public Peep peepPrefab;
@@ -58,7 +58,7 @@ public class PeepGenerator : MonoBehaviour
             int randomStartIndex = Random.Range(0, SpawnPoints.Count - 1);
             CodeTile startTile = SpawnPoints[randomStartIndex];
 
-            peep.transform.position = new Vector3(startTile.posX, startTile.posY, 1);
+            peep.transform.position = new Vector3(startTile.posX + 0.5f, startTile.posY + 0.5f, 1);
             return peep;
         }
         else

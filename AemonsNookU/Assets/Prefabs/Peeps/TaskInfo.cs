@@ -7,14 +7,14 @@ public static class TaskInfo
 
     public enum Type
     {
-        WALK, 
-        SEEK_FOOD, 
-        SEEK_REST, 
-        EXIT, 
-        SEEK_BRAWL, 
-        POOP, 
-        SEEK_TAVERN, 
-        SEEK_BATHROOM, 
+        WALK,
+        SEEK_FOOD,
+        SEEK_REST,
+        EXIT,
+        SEEK_BRAWL,
+        POOP,
+        SEEK_TAVERN,
+        SEEK_BATHROOM,
         SEEK_BLACKSMITH
     }
 
@@ -24,6 +24,19 @@ public static class TaskInfo
         Task task = new Task();
         return task;
     }
+
+    // Revisit this after implementing the tile.Above, tile.Left, etc...
+
+    //public Queue<CodeTile> GenerateWalkQueue(CodeTile startTile, List<CodeTile> allRoadTiles)
+    //{
+    //    Queue<CodeTile> walkQueue = new Queue<CodeTile>();
+    //    Dictionary<CodeTile, CodeTile> visitedTiles = new Dictionary<CodeTile, CodeTile>();
+    //    visitedTiles[startTile] = null;
+
+
+
+    //    return walkQueue;
+    //}
 
 
 }
