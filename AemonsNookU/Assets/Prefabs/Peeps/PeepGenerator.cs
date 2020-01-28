@@ -21,9 +21,11 @@ public class PeepGenerator : MonoBehaviour
     public Peep peepPrefab;
 
     List<Peep> Peeps = new List<Peep>();
+    public int MaxPeeps;
 
     public bool Started;
-    public List<CodeTile> SpawnPoints = new List<CodeTile>();
+    public List<CodeTile> SpawnRoadTiles = new List<CodeTile>();
+    public List<CodeTile> RoadTiles = new List<CodeTile>();
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class PeepGenerator : MonoBehaviour
     {
         CreationAlarmReset = 60 * 5;
         CreationAlarm = CreationAlarmReset;
+        MaxPeeps = 200;
     }
 
     // Update is called once per frame
@@ -43,22 +46,37 @@ public class PeepGenerator : MonoBehaviour
         CreationAlarm--;
         if (CreationAlarm <= 0)
         {
-            Peeps.Add(GeneratePeep());
+            if (Peeps.Count < MaxPeeps)
+            {
+                Peeps.Add(GeneratePeep());
+            }
+
             CreationAlarm = CreationAlarmReset;
         }
     }
 
+
+    public CodeTile GetRandomRoadTile()
+    {
+        return RoadTiles[Random.Range(0, RoadTiles.Count - 1)];
+    }
+
     public Peep GeneratePeep()
     {
-        if (SpawnPoints.Count > 0)
+        if (SpawnRoadTiles.Count > 0)
         {
             Peep peep = Object.Instantiate(peepPrefab);
+            peep.MyPeepGenerator = this;
             UpdatePeepCloths(peep);
 
-            int randomStartIndex = Random.Range(0, SpawnPoints.Count - 1);
-            CodeTile startTile = SpawnPoints[randomStartIndex];
+            int randomStartIndex = Random.Range(0, SpawnRoadTiles.Count - 1);
+            CodeTile startTile = SpawnRoadTiles[randomStartIndex];
+            peep.OnTopOfTile = startTile;
+            peep.pos = new Vector3(startTile.posX + 0.5f, startTile.posY + 0.5f, 1);
 
-            peep.transform.position = new Vector3(startTile.posX + 0.5f, startTile.posY + 0.5f, 1);
+            CodeTile ranRoad = GetRandomRoadTile();
+
+            peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
             return peep;
         }
         else
@@ -66,6 +84,189 @@ public class PeepGenerator : MonoBehaviour
             return null;
         }
     }
+
+    public void GenerateNextTask(Peep peep)
+    {
+        switch (peep.Type)
+        {
+            case PeepInfo.Type.child:
+                this.GenerateTaskChild(peep);
+                break;
+
+            case PeepInfo.Type.homeless:
+                this.GenerateTaskHomeless(peep);
+                break;
+
+            case PeepInfo.Type.thief:
+                this.GenerateTaskThief(peep);
+                break;
+
+            case PeepInfo.Type.farmer:
+                this.GenerateTaskFarmer(peep);
+                break;
+
+            case PeepInfo.Type.trader:
+                this.GenerateTaskTrader(peep);
+                break;
+
+            case PeepInfo.Type.bard:
+                this.GenerateTaskBard(peep);
+                break;
+
+            case PeepInfo.Type.monk:
+                this.GenerateTaskMonk(peep);
+                break;
+
+            case PeepInfo.Type.nun:
+                this.GenerateTaskNun(peep);
+                break;
+
+            case PeepInfo.Type.priest:
+                this.GenerateTaskPriest(peep);
+                break;
+
+            case PeepInfo.Type.knight:
+                this.GenerateTaskKnight(peep);
+                break;
+
+            case PeepInfo.Type.quester:
+                this.GenerateTaskQuester(peep);
+                break;
+
+            case PeepInfo.Type.foreigner:
+                this.GenerateTaskForeigner(peep);
+                break;
+
+            case PeepInfo.Type.witch:
+                this.GenerateTaskWitch(peep);
+                break;
+
+            case PeepInfo.Type.elder:
+                this.GenerateTaskElder(peep);
+                break;
+
+            case PeepInfo.Type.wizard:
+                this.GenerateTaskWizard(peep);
+                break;
+
+            case PeepInfo.Type.lady:
+                this.GenerateTaskLady(peep);
+                break;
+
+            case PeepInfo.Type.king:
+                this.GenerateTaskKing(peep);
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    #region GENERATE TASKS BASED ON TYPE Of PEEP
+    public void GenerateTaskChild(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskHomeless(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskThief(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskFarmer(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskTrader(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskBard(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskMonk(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskNun(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskPriest(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskKnight(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskQuester(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskForeigner(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskWitch(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskElder(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskWizard(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskLady(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+
+    public void GenerateTaskKing(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+    }
+    #endregion
+
 
     public void UpdatePeepCloths(Peep p)
     {

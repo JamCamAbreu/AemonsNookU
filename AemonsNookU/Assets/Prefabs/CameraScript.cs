@@ -2,37 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalMethods
-{
-    public static float Ease(float curVal, float targetVal, float speed)
-    {
-        return curVal + (targetVal - curVal) * speed;
-    }
-
-    public static int Ease(int curVal, int targetVal, float speed)
-    {
-        return (int)(curVal + (targetVal - curVal) * speed);
-    }
-
-    public static double Ease(double curVal, double targetVal, float speed)
-    {
-        return (double)(curVal + (targetVal - curVal) * speed);
-    }
-
-
-    public static Vector3 Ease(Vector3 curVal, Vector3 targetVal, float speed)
-    {
-        return (Vector3)(curVal + (targetVal - curVal) * speed);
-    }
-
-}
-
 public class CameraScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Vector3 TargetPos;
-
-
+    public Vector3 TargetPos;
 
     public int MapHeight;
     public int MapWidth;
@@ -107,8 +80,7 @@ public class CameraScript : MonoBehaviour
     {
         float centerX = MapWidth / 2;
         float centerY = MapHeight / 2;
-        float centerZ = (float)MapWidth * 0.8f;
 
-        this.TargetPos = new Vector3(centerX, centerY, centerZ);
+        this.TargetPos = new Vector3(centerX, centerY, -10);
     }
 }

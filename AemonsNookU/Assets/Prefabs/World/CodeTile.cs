@@ -51,6 +51,4 @@ public class CodeTile
         TileType = t;
     }
 
-
-
 }

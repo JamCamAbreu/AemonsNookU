@@ -191,6 +191,7 @@ public class World : MonoBehaviour
 
             case 'D':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
                 RoadTiles.Add(curTile);
                 break;
 
@@ -237,8 +238,14 @@ public class World : MonoBehaviour
 
     private void StartPeepGenerator()
     {
-        peepGenerator.SpawnPoints.AddRange(SpawnTiles);
+        peepGenerator.SpawnRoadTiles.AddRange(SpawnTiles);
+        peepGenerator.RoadTiles.AddRange(RoadTiles);
         peepGenerator.Started = true;
+    }
+    private void UpdatePeepGenerator()
+    {
+        peepGenerator.SpawnRoadTiles = SpawnTiles;
+        peepGenerator.RoadTiles = RoadTiles;
     }
 
 
