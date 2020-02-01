@@ -46,6 +46,7 @@ public class TaskWalkRandom : Task
             {
                 return false; // no more work to do!
             }
+            this.SetPeepDirection();
         }
 
         float closeGap = 0.05f;
@@ -64,5 +65,28 @@ public class TaskWalkRandom : Task
         return true;
     }
 
+    public void SetPeepDirection()
+    {
+        CodeTile cur = this.curStep;
+        CodeTile next = this.nextStep;
+
+        if (next == cur.TileAbove)
+        {
+            this.MyPeep.SetDirection(Peep.Direction.Up);
+        }
+        else if (next == cur.TileRight)
+        {
+            this.MyPeep.SetDirection(Peep.Direction.Right);
+        }
+        else if (next == cur.TileBelow)
+        {
+            this.MyPeep.SetDirection(Peep.Direction.Down);
+        }
+        else if (next == cur.TileLeft)
+        {
+            this.MyPeep.SetDirection(Peep.Direction.Left);
+        }
+
+    }
 
 }

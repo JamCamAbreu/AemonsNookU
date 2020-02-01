@@ -5,6 +5,13 @@ using UnityEngine.Assertions;
 
 public class Peep : MonoBehaviour
 {
+    public enum Direction
+    {
+        Up,
+        Right,
+        Down,
+        Left
+    }
 
     public SpriteRenderer rend { get { return this.GetComponent<SpriteRenderer>(); } }
     public Vector2 pos
@@ -12,6 +19,8 @@ public class Peep : MonoBehaviour
         get { return this.transform.position; }
         set { this.transform.position = value; }
     }
+
+
     public CodeTile OnTopOfTile { get; set; }
 
     public Stack<Task> MyTasks { get; set; }
@@ -74,5 +83,29 @@ public class Peep : MonoBehaviour
         CurrentTask = null;
     }
 
+    public void SetDirection(Direction dir)
+    {
+        switch (dir)
+        {
+            case Direction.Up:
+                transform.rotation = Quaternion.Euler(0, 0, 270f);
+                break;
+
+            case Direction.Right:
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                break;
+
+            case Direction.Down:
+                transform.rotation = Quaternion.Euler(0, 0, 90f);
+                break;
+
+            case Direction.Left:
+                transform.rotation = Quaternion.Euler(0, 0, 180f);
+                break;
+
+            default:
+                break;
+        }
+    }
 
 }
