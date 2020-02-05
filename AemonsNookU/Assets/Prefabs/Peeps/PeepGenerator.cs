@@ -19,6 +19,7 @@ public class PeepGenerator : MonoBehaviour
     public int CreationAlarmReset;
     public int CreationAlarm;
     public Peep peepPrefab;
+    public NotificationCanvas notificationCanvas;
 
     List<Peep> Peeps = new List<Peep>();
     public int MaxPeeps;
@@ -77,6 +78,11 @@ public class PeepGenerator : MonoBehaviour
             CodeTile ranRoad = GetRandomRoadTile();
 
             peep.MyTasks.Push(new TaskWalkRandom(peep, ranRoad, RoadTiles));
+
+            // Create notification to user
+            string arrivalMessage = $"{peep.FirstName} {peep.SirName} has arrived!";
+            notificationCanvas.AddNotification(Notification.Type.peepArrival, arrivalMessage);
+
             return peep;
         }
         else

@@ -72,7 +72,6 @@ public class World : MonoBehaviour
     public Tilemap botMap;
 
     public PeepGenerator peepGenerator;
-
     public NotificationCanvas notificationCanvas;
     #endregion
 

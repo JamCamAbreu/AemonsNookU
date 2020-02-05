@@ -127,6 +127,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1512980396604556695, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512980396604556695, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512980396604556695, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9821305
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512980396604556695, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2007274819924959298, guid: 0379250a5f1db41439b829381d8fb82c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +252,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2327351864602162769, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149224960434323596, guid: 0379250a5f1db41439b829381d8fb82c,
+        type: 3}
+      propertyPath: PanelObj
+      value: 
+      objectReference: {fileID: 971322089}
     - target: {fileID: 7456272169547097976, guid: 0379250a5f1db41439b829381d8fb82c,
         type: 3}
       propertyPath: m_Name
@@ -251,6 +281,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1cda65429c0d064fb31e2d1dce39c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &971322089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372311791215135993, guid: 0379250a5f1db41439b829381d8fb82c,
+    type: 3}
+  m_PrefabInstance: {fileID: 149003778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1025594787 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4477766397415594532, guid: 426022c3bb3b2db4494b050741a77e13,
@@ -400,5 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: notificationCanvas
+      value: 
+      objectReference: {fileID: 149003779}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 426022c3bb3b2db4494b050741a77e13, type: 3}
