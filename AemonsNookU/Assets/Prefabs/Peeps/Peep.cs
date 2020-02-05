@@ -35,6 +35,8 @@ public class Peep : MonoBehaviour
     public int Fame;
     public int FatiguePoints; // tasks cost fatigue points, points before tired and wants to leave
 
+    private Animator feetAnimator;
+
     // Resources (in pounds):
     public Dictionary<string, Item> Inventory { get; set; }
 
@@ -45,6 +47,9 @@ public class Peep : MonoBehaviour
 
         int randomType = Random.Range(0, 17);
         PeepInfo.UpdatePeepType(this, (PeepInfo.Type)randomType);
+
+        feetAnimator = GetComponentInChildren<Animator>();
+        //feetAnimator.Play("Feet1");
     }
 
     // Start is called before the first frame update
