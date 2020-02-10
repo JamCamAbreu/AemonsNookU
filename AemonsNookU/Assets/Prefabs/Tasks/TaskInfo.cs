@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public static class TaskInfo
 {
@@ -23,6 +24,10 @@ public static class TaskInfo
 
     public static Stack<CodeTile> GenerateWalkQueue(CodeTile startTile, CodeTile targetTile, List<CodeTile> allRoadTiles)
     {
+
+        Assert.IsTrue(allRoadTiles.Contains(startTile));
+        Assert.IsTrue(allRoadTiles.Contains(targetTile));
+
         Queue<CodeTile> tileQueue = new Queue<CodeTile>(); // paths to test
         Stack<CodeTile> returnQueue = new Stack<CodeTile>(); // our final path
         Dictionary<CodeTile, CodeTile> visitedTiles = new Dictionary<CodeTile, CodeTile>(); // tells us 1. where we visited, and 2. where from

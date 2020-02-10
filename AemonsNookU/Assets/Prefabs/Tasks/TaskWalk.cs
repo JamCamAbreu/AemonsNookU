@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Assertions;
 
-public class TaskWalkRandom : Task
+public class TaskWalk : Task
 {
     public CodeTile StartTile { get; set; }
     public CodeTile TargetTile { get; set; }
@@ -12,8 +13,9 @@ public class TaskWalkRandom : Task
 
     public CodeTile curStep { get; set; }
     public CodeTile nextStep { get; set; }
+    public bool IgnoresFatigue { get; set; }
 
-    public TaskWalkRandom(Peep peep, CodeTile targetTile, List<CodeTile> allRoads)
+    public TaskWalk(Peep peep, CodeTile targetTile, List<CodeTile> allRoads, bool ignoresFatigue)
     {
         this.MyPeep = peep;
         this.TaskType = TaskInfo.Type.WALK_RANDOM;
@@ -22,11 +24,16 @@ public class TaskWalkRandom : Task
         this.AllRoads = allRoads;
 
         this.MyPath = TaskInfo.GenerateWalkQueue(this.StartTile, this.TargetTile, this.AllRoads);
+        Debug.Log($"Generated path with {this.MyPath.Count} steps between tile {StartTile.posX},{StartTile.posY} and target {TargetTile.posX},{TargetTile.posY}");
+        Assert.IsTrue(this.MyPath.Count > 0);
+
         this.curStep = this.StartTile;
         this.nextStep = this.GetNextStep();
+
+        this.IgnoresFatigue = ignoresFatigue;
     }
 
-    private CodeTile GetNextStep()
+    protected CodeTile GetNextStep()
     {
         if (MyPath.Count > 0) { return MyPath.Pop(); }
         else return null;
@@ -36,13 +43,24 @@ public class TaskWalkRandom : Task
     {
         if (this.nextStep == null)
         {
-            return false;
+            this.nextStep = GetNextStep();
         }
 
         // get new step, or finished:
         if (this.curStep == this.nextStep)
         {
             this.nextStep = GetNextStep();
+
+            // Check fatigue and cancel if fatigued:
+            if (!IgnoresFatigue)
+            {
+                this.MyPeep.FatiguePoints -= 1; // walking causes 1 fatigue per step
+                if (MyPeep.FatiguePoints <= 0)
+                {
+                    return false;
+                }
+            }
+
             if (this.nextStep == null)
             {
                 return false; // no more work to do!
@@ -53,10 +71,14 @@ public class TaskWalkRandom : Task
         float closeGap = 0.05f;
         float cen = 0.5f;
         Vector2 movePos = new Vector2(this.nextStep.posX + cen, this.nextStep.posY + cen);
-        if (Vector2.Distance(this.MyPeep.pos, movePos) <= closeGap)
+        float dist = Vector2.Distance(this.MyPeep.pos, movePos);
+        if (dist < 0.5f)
+        {
+            this.MyPeep.OnTopOfTile = this.nextStep;
+        }
+        if (dist <= closeGap)
         {
             this.MyPeep.pos = movePos;
-            this.MyPeep.OnTopOfTile = this.curStep;
             this.curStep = nextStep;
         }
         else

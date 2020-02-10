@@ -10,6 +10,7 @@ public class Notification : MonoBehaviour
         tip,
         peepArrival,
         peepArrivalRoyal,
+        peepDeparture,
         barfight,
         incomingWave
     }
@@ -53,6 +54,10 @@ public class Notification : MonoBehaviour
                 this.frontHighlight.color = Color.cyan;
                 break;
 
+            case Type.peepDeparture:
+                this.frontHighlight.color = Color.grey;
+                break;
+
             case Type.barfight:
                 this.frontHighlight.color = Color.red;
                 break;
@@ -74,7 +79,6 @@ public class Notification : MonoBehaviour
 
     public void UpdateTransparency(float newTransparency)
     {
-        Debug.Log($"setting transparency to {newTransparency}");
         Color cur = this.frontHighlight.color;
         this.frontHighlight.color = new Color(cur.r, cur.g, cur.b, 255*newTransparency);
 

@@ -106,7 +106,7 @@ public class NotificationCanvas : MonoBehaviour
         note.started = true;
 
         notifications.Insert(0, note);
-        note.transform.parent = PanelObj.transform;
+        note.transform.SetParent(PanelObj.transform, false);
     }
 
 

@@ -130,6 +130,21 @@ public class World : MonoBehaviour
 
 
 
+    // --------------- ROADS --------------------
+    #region ROADS
+    public CodeTile GetRandomRoadTile()
+    {
+        return RoadTiles[Random.Range(0, RoadTiles.Count - 1)];
+    }
+
+    public CodeTile GetRandomExitTile()
+    {
+        return SpawnTiles[Random.Range(0, SpawnTiles.Count - 1)];
+    }
+
+    #endregion
+
+
 
     // --------------- LEVEL -----------------
     #region LEVEL
@@ -198,6 +213,7 @@ public class World : MonoBehaviour
 
             case '1':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 1;
                 SpawnTiles.Add(curTile);
@@ -205,6 +221,7 @@ public class World : MonoBehaviour
 
             case '2':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 2;
                 SpawnTiles.Add(curTile);
@@ -212,6 +229,7 @@ public class World : MonoBehaviour
 
             case '3':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 3;
                 SpawnTiles.Add(curTile);
@@ -219,6 +237,7 @@ public class World : MonoBehaviour
 
             case '4':
                 curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 4;
                 SpawnTiles.Add(curTile);
@@ -240,13 +259,18 @@ public class World : MonoBehaviour
     private void StartPeepGenerator()
     {
         peepGenerator.SpawnRoadTiles.AddRange(SpawnTiles);
-        peepGenerator.RoadTiles.AddRange(RoadTiles);
+        peepGenerator.AllRoadTiles.AddRange(SpawnTiles);
+        peepGenerator.AllRoadTiles.AddRange(RoadTiles);
+        peepGenerator.MyWorld = this;
         peepGenerator.Started = true;
     }
     private void UpdatePeepGenerator()
     {
-        peepGenerator.SpawnRoadTiles = SpawnTiles;
-        peepGenerator.RoadTiles = RoadTiles;
+        peepGenerator.SpawnRoadTiles.Clear();
+        peepGenerator.SpawnRoadTiles.AddRange(SpawnTiles);
+        peepGenerator.AllRoadTiles.Clear();
+        peepGenerator.AllRoadTiles.AddRange(SpawnTiles);
+        peepGenerator.AllRoadTiles.AddRange(RoadTiles);
     }
 
 

@@ -26,6 +26,7 @@ public class Peep : MonoBehaviour
     public Stack<Task> MyTasks { get; set; }
     public Task CurrentTask { get; set; }
     public PeepGenerator MyPeepGenerator { get; set; }
+    public NotificationCanvas notificationCanvas;
 
     public PeepInfo.Type Type;
     public PeepInfo.Sex Sex;
@@ -68,7 +69,7 @@ public class Peep : MonoBehaviour
             }
             else
             {
-                Debug.Log($"{this.FirstName} {this.SirName} finished. Generating a new task.");
+                Debug.Log($"{this.FirstName} {this.SirName} finished all tasks. Generating a new task.");
                 MyPeepGenerator.GenerateNextTask(this);
 
                 Assert.IsTrue(this.MyTasks.Count > 0);
@@ -113,4 +114,9 @@ public class Peep : MonoBehaviour
         }
     }
 
+    public void DepartLevel()
+    {
+        MyPeepGenerator.Peeps.Remove(this);
+        Destroy(this.gameObject);
+    }
 }
