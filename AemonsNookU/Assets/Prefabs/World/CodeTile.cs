@@ -22,6 +22,7 @@ public class CodeTile
     /// Properties
     public int posX { get; set; }
     public int posY { get; set; }
+    public bool canBuild { get; set; }
     public bool isBuilding { get; set; }
     public bool isPath { get; set; }
 
@@ -49,6 +50,34 @@ public class CodeTile
     public void UpdateTileType(Type t)
     {
         TileType = t;
+        canBuild = isBuildableType(t);
     }
+
+    public bool isBuildableType(Type t)
+    {
+        switch (t)
+        {
+            case Type.building:
+                return false;
+
+            case Type.grass:
+                return true;
+
+            case Type.road:
+                return false;
+
+            case Type.stone:
+                return false;
+
+            case Type.tree:
+                return false;
+
+            case Type.water:
+                return false;
+        }
+
+        throw new System.Exception($"Invalid buildable type. CodeTile.cs, isBuildableType method");
+    }
+
 
 }

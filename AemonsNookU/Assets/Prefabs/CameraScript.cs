@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,15 +21,17 @@ public class CameraScript : MonoBehaviour
     public float panBorderThickness;
     public float scrollSpeed;
 
-    private float targetZoom;
+    public float targetZoom;
+
+    private const float LARGEST_MAX_ZOOM = 24f;
+    private const float SMALLEST_MAX_ZOOM = 10f;
 
         // Start is called before the first frame update
     void Start()
     {
         TargetPos = transform.position;
-        maxZoom = (float)MapWidth * 1.5f;
-        panSpeed += (float)MapWidth * 0.15f;
-        scrollSpeed += (float)MapWidth * 0.25f;
+        //panSpeed += (float)MapWidth * 0.25f;
+        //scrollSpeed += (float)MapWidth * 0.5f;
 
         targetZoom = GetComponent<Camera>().orthographicSize;
         //CenterCamera();
@@ -38,6 +41,7 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        maxZoom = Mathf.Clamp(MapWidth / 3.5f, SMALLEST_MAX_ZOOM, LARGEST_MAX_ZOOM);
 
         //if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         if (Input.GetKey("w"))
@@ -65,13 +69,15 @@ public class CameraScript : MonoBehaviour
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         targetZoom -= scroll * scrollSpeed * 40f * Time.deltaTime;
+        targetZoom = Mathf.Clamp(targetZoom, minZoom, maxZoom);
+
         float curZoom = GetComponent<Camera>().orthographicSize;
         GetComponent<Camera>().orthographicSize = GlobalMethods.Ease(curZoom, targetZoom, SmoothingSpeed);
 
 
-        //TargetPos.x = Mathf.Clamp(TargetPos.x, 0, MapHeight*tileDimension);
-        //TargetPos.z = Mathf.Clamp(TargetPos.z, 0, MapWidth*tileDimension);
-        //TargetPos.y = Mathf.Clamp(TargetPos.y, minZoom, maxZoom);
+        TargetPos.x = Mathf.Clamp(TargetPos.x, 0, MapWidth);
+        TargetPos.y = Mathf.Clamp(TargetPos.y, 0, MapHeight);
+
 
         transform.position = GlobalMethods.Ease(transform.position, this.TargetPos, SmoothingSpeed);
     }

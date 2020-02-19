@@ -18,6 +18,8 @@ public class World : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InitGameFramerate();
+
         Level test = new Level01();
         LoadLevel(test);
     }
@@ -25,6 +27,8 @@ public class World : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        limitGameFramerate();
+
         if (peepGenerator.Started == false)
         {
             StartPeepGenerator();
@@ -36,6 +40,8 @@ public class World : MonoBehaviour
 
     // ------------- Properties ----------------
     #region PROPERTIES
+    public int targetFramerate = 60;
+    public Player currentPlayer;
     public int WorldWidth;
     public int WorldHeight;
     private CodeTile[][] WorldTiles;
@@ -255,6 +261,33 @@ public class World : MonoBehaviour
 
     // --------------- SYSTEM -----------------
     #region SYSTEM
+
+    public CodeTile TileAt(int posX, int posY)
+    {
+        if (posX >= 0 && posX < WorldWidth && posY >= 0 && posY < WorldHeight)
+        {
+            return WorldTiles[posY][posX];
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    private void limitGameFramerate()
+    {
+        if (Application.targetFrameRate != targetFramerate)
+        {
+            Application.targetFrameRate = targetFramerate;
+        }
+    }
+
+    private void InitGameFramerate()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = targetFramerate;
+    }
+
 
     private void StartPeepGenerator()
     {
