@@ -6,9 +6,9 @@ public class BuildingMenuButton : MonoBehaviour
 {
 
     public World world;
-    public BuildingSelection buildingSelectionPrefab;
 
     public BuildingInfo.Type bType;
+    public BuildingSelection selectionPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class BuildingMenuButton : MonoBehaviour
 
     public void CreateSelection()
     {
-        BuildingSelection buildingSelection = Object.Instantiate(buildingSelectionPrefab);
+        BuildingSelection buildingSelection = Object.Instantiate(selectionPrefab);
         buildingSelection.Init(world, bType);
     }
 
