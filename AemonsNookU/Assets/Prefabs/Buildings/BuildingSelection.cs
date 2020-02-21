@@ -22,20 +22,23 @@ public class BuildingSelection : MonoBehaviour
 
     public bool isPlaceable;
 
+    public BuildingInfo.Type buildingType { get; set; }
+
     // Update is called once per frame
     public void Update()
     {
         FollowMouse();
         isPlaceable = AnalyzeAndUpdatePlacementSquares();
+        CheckClick();
     }
 
     
 
-    public void Init(World worldScript, BuildingInfo.Type buildingType)
+    public void Init(World worldScript, BuildingInfo.Type bType)
     {
         world = worldScript;
-        List<Tuple<int, int>> relativeCoordinates = BuildingInfo.RetrieveRelativeCoordinates(buildingType);
-        List<Tuple<int, int>> requiredRoadPositions = BuildingInfo.RetrieveRequiredRoadPositions(buildingType);
+        List<Tuple<int, int>> relativeCoordinates = BuildingInfo.RetrieveRelativeCoordinates(bType);
+        List<Tuple<int, int>> requiredRoadPositions = BuildingInfo.RetrieveRequiredRoadPositions(bType);
 
         foreach (Tuple<int, int> coord in relativeCoordinates)
         {
@@ -56,7 +59,41 @@ public class BuildingSelection : MonoBehaviour
             square.myType = BuildingSelectionSquare.Type.entrance;
             mySquares.Add(square);
         }
+
+        this.buildingType = bType;
     }
+
+    public void Build()
+    {
+        Debug.Log($"Let's build the building: {buildingType}!");
+        //TODO
+    }
+
+    public void DestroyMe()
+    {
+        foreach (BuildingSelectionSquare square in mySquares)
+        {
+            Destroy(square.gameObject);
+        }
+        Destroy(this.gameObject);
+    }
+
+    public void CheckClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (isPlaceable)
+            {
+                Build();
+                DestroyMe();
+            }
+            else
+            {
+                Debug.Log($"Sorry, you cannot build here!");
+            }
+        }
+    }
+
 
     public void FollowMouse()
     {
@@ -93,14 +130,15 @@ public class BuildingSelection : MonoBehaviour
             if (curTile != null)
             {
                 square.TileUnderneath = curTile;
-                if (square.UpdatePlaceable() == false)
+                if (square.LastPlaceable() == false)
                 {
                     placementOkay = false;
                 }
             }
             else
             {
-                // set invisible
+                square.ForceSprite(false);
+                placementOkay = false;
             }
         }
 

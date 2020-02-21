@@ -32,8 +32,21 @@ public class BuildingSelectionSquare : MonoBehaviour
     {
     }
 
+    public void ForceSprite(bool canBuild)
+    {
+        if (myType == Type.building)
+        {
+            if (canBuild) { UpdateSprite(SpriteType.buildingPlacementGood); }
+            else { UpdateSprite(SpriteType.buildingPlacementBad); }
+        }
+        else
+        {
+            if (canBuild) { UpdateSprite(SpriteType.buildingEntranceConnectedRoad); }
+            else { UpdateSprite(SpriteType.buildingEntranceMissingRoad); }
+        }
+    }
 
-    public bool UpdatePlaceable()
+    public bool LastPlaceable()
     {
         if (TileUnderneath != null)
         {

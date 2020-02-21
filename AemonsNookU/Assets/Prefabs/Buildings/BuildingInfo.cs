@@ -131,6 +131,14 @@ public static class BuildingInfo
                 relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
+            case Type.BATH:
+                //      +++
+                //      +++
+                //      +++
+                //       ^
+                relativeCoordinates.Add(Tuple.Create(1, -1));
+                break;
+
             default:
                 break;
         }
@@ -237,6 +245,19 @@ public static class BuildingInfo
 
                 relativeCoordinates.Add(Tuple.Create(1, 0));
                 relativeCoordinates.Add(Tuple.Create(1, 1));
+                break;
+
+            case Type.BATH:
+                relativeCoordinates.Add(Tuple.Create(0, 1));
+                relativeCoordinates.Add(Tuple.Create(0, 2));
+
+                relativeCoordinates.Add(Tuple.Create(1, 0));
+                relativeCoordinates.Add(Tuple.Create(1, 1));
+                relativeCoordinates.Add(Tuple.Create(1, 2));
+
+                relativeCoordinates.Add(Tuple.Create(2, 0));
+                relativeCoordinates.Add(Tuple.Create(2, 1));
+                relativeCoordinates.Add(Tuple.Create(2, 2));
                 break;
 
             default:
