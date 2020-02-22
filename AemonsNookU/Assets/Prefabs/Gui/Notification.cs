@@ -7,6 +7,7 @@ public class Notification : MonoBehaviour
 {
     public enum Type
     {
+        userAction,
         tip,
         peepArrival,
         peepArrivalRoyal,
@@ -43,6 +44,7 @@ public class Notification : MonoBehaviour
         switch (t)
         {
             case Type.tip:
+            case Type.userAction:
                 this.frontHighlight.color = Color.white;
                 break;
 

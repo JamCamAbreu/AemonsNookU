@@ -29,5 +29,21 @@ public class GlobalMethods
         return (Vector3)(curVal + (targetVal - curVal) * speed);
     }
 
+    public static void Rot90(BuildingSelectionSquare input)
+    {
+        int preX = input.relativeX;
+        int preY = input.relativeY;
+
+        input.relativeX = -preY;
+        input.relativeY = preX;
+    }
+
+    public static Vector2 Rot90(Vector2 input)
+    {
+        float preX = input.x;
+        float preY = input.y;
+
+        return new Vector2(-preY, preX);
+    }
 
 }

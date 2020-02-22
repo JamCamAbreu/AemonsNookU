@@ -47,7 +47,7 @@ public static class PeepInfo
     public static int GenerateFatigue(Type t, Sex s)
     {
         // todo
-        return 20;
+        return 250;
     }
 
     public static int GenerateAge(Type t)

@@ -333,6 +333,7 @@ public class World : MonoBehaviour
             {
                 curTile = CodeTileInitPos(w, h);
                 curTile.UpdateTileType(CodeTile.Type.grass);
+                curTile.world = this;
                 WorldTiles[h][w] = curTile;
             }
         }
@@ -427,19 +428,23 @@ public class World : MonoBehaviour
                 botMap.SetTile(new Vector3Int(xPos, yPos, 0), water);
                 break;
 
+            case CodeTile.Type.building:
+                botMap.SetTile(new Vector3Int(xPos, yPos, 0), road);
+                break;
+
             default:
                 break;
         }
     }
 
-    private void SetTileMapTile(int xPos, int yPos, CodeTile.Type type)
+    public void SetTileMapTile(int xPos, int yPos, CodeTile.Type type)
     {
         SetBotMapTile(xPos, yPos, type);
         SetMidMapTile(xPos, yPos, type);
         SetTopMapTile(xPos, yPos, type);
     }
 
-    private void TileMapUpdate()
+    public void TileMapUpdate()
     {
         if (codeTilesReady)
         {

@@ -26,22 +26,22 @@ public class CameraScript : MonoBehaviour
     private const float LARGEST_MAX_ZOOM = 24f;
     private const float SMALLEST_MAX_ZOOM = 10f;
 
+    private int startTimer;
+
         // Start is called before the first frame update
     void Start()
     {
         TargetPos = transform.position;
-        //panSpeed += (float)MapWidth * 0.25f;
-        //scrollSpeed += (float)MapWidth * 0.5f;
-
         targetZoom = GetComponent<Camera>().orthographicSize;
-        //CenterCamera();
+        startTimer = 2;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        maxZoom = Mathf.Clamp(MapWidth / 3.5f, SMALLEST_MAX_ZOOM, LARGEST_MAX_ZOOM);
+        CameraInitTimer();
+
 
         //if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         if (Input.GetKey("w"))
@@ -74,13 +74,27 @@ public class CameraScript : MonoBehaviour
         float curZoom = GetComponent<Camera>().orthographicSize;
         GetComponent<Camera>().orthographicSize = GlobalMethods.Ease(curZoom, targetZoom, SmoothingSpeed);
 
-
         TargetPos.x = Mathf.Clamp(TargetPos.x, 0, MapWidth);
         TargetPos.y = Mathf.Clamp(TargetPos.y, 0, MapHeight);
 
-
         transform.position = GlobalMethods.Ease(transform.position, this.TargetPos, SmoothingSpeed);
     }
+
+    public void CameraInitTimer()
+    {
+        if (startTimer >= 0)
+        {
+            startTimer--;
+        }
+
+        if (startTimer == 0)
+        {
+            maxZoom = Mathf.Clamp(MapWidth / 3.5f, SMALLEST_MAX_ZOOM, LARGEST_MAX_ZOOM);
+            targetZoom = maxZoom;
+            CenterCamera();
+        }
+    }
+
 
     public void CenterCamera()
     {

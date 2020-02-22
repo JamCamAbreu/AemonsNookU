@@ -17,7 +17,8 @@ public class PeepGenerator : MonoBehaviour
 
     // This class will have an interface and be USED by the World class.
     public World MyWorld;
-    public int CreationAlarmReset;
+    public int CreationAlarmResetMin;
+    public int CreationAlarmResetMax;
     public int CreationAlarm;
     public Peep peepPrefab;
     public NotificationCanvas notificationCanvas;
@@ -37,9 +38,10 @@ public class PeepGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreationAlarmReset = 60 * 5;
-        CreationAlarm = CreationAlarmReset;
-        MaxPeeps = 1;
+        CreationAlarmResetMin = 60 * 2; // get from level
+        CreationAlarmResetMax = 60 * 6; // get from level
+        CreationAlarm = CreationAlarmResetMax;
+        MaxPeeps = 35; // get from level
     }
 
     // Update is called once per frame
@@ -53,7 +55,7 @@ public class PeepGenerator : MonoBehaviour
                 Peeps.Add(GeneratePeep());
             }
 
-            CreationAlarm = CreationAlarmReset;
+            CreationAlarm = Random.Range(CreationAlarmResetMin, CreationAlarmResetMax);
         }
     }
 

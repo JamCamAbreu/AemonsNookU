@@ -19,13 +19,15 @@ public class BuildingSelection : MonoBehaviour
     public BuildingSelectionSquare SquarePrefab;
     public List<BuildingSelectionSquare> mySquares = new List<BuildingSelectionSquare>();
 
+    public Building myBuildingPrefab;
+
     public int originX;
     public int originY;
+    const float spriteOffset = 0.5f;
 
     public int lastValidMouseX = 0;
     public int lastValidMouseY = 0;
 
-    const float spriteOffset = 0.5f;
 
     public CodeTile TileUnderMouse;
 
@@ -56,15 +58,23 @@ public class BuildingSelection : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            foreach (BuildingSelectionSquare square in mySquares)
+            {
+                GlobalMethods.Rot90(square);
 
+                // Shuffle through rotations:
+                myRotation++;
+                if (myRotation > Rotation.threeClock) { myRotation = Rotation.none; }
+            }
         }
     }
     
 
-    public void Init(World worldScript, BuildingInfo.Type bType)
+    public void Init(World worldScript, BuildingInfo.Type bType, Building prefab)
     {
         world = worldScript;
         myRotation = Rotation.none;
+        myBuildingPrefab = prefab;
 
         List<Tuple<int, int>> relativeCoordinates = BuildingInfo.RetrieveRelativeCoordinates(bType);
         List<Tuple<int, int>> requiredRoadPositions = BuildingInfo.RetrieveRequiredRoadPositions(bType);
@@ -94,9 +104,38 @@ public class BuildingSelection : MonoBehaviour
 
     public void Build()
     {
-        //TODO
         Debug.Log($"Let's build the building: {buildingType}!");
-        BuildingConstructor.Construct(this.originX, this.originY, mySquares, buildingType, myRotation);
+
+        // Construct prefab
+        Building createdBuilding = Instantiate(myBuildingPrefab);
+        createdBuilding.Rotation = myRotation;
+        createdBuilding.UpdateRotationSprite();
+
+        foreach (BuildingSelectionSquare square in mySquares)
+        {
+            if (square.myType == BuildingSelectionSquare.Type.building)
+            {
+                createdBuilding.TilesUnderneath.Add(square.TileUnderneath);
+                square.TileUnderneath.UpdateTileType(CodeTile.Type.building);
+            }
+            else
+            {
+                createdBuilding.Entrances.Add(square.TileUnderneath);
+
+                // Add signpost to path?
+            }
+        }
+        this.world.TileMapUpdate();
+
+        // Modify prefab:
+        BuildingSelectionSquare topLeft = GetBottomLeftSquare();
+        createdBuilding.originX = this.originX + topLeft.relativeX;
+        createdBuilding.originY = this.originY + topLeft.relativeY;
+
+        // Play sound effect
+
+        // Notification:
+        world.notificationCanvas.AddNotification(Notification.Type.userAction, $"Successfully constructed {createdBuilding.Name}.");
     }
 
     public void DestroyMe()
@@ -173,6 +212,25 @@ public class BuildingSelection : MonoBehaviour
         }
 
         return placementOkay;
+    }
+
+    public BuildingSelectionSquare GetBottomLeftSquare()
+    {
+        BuildingSelectionSquare retSquare = null;
+        int smallestX = 0;
+        int smallestY = 0;
+
+        foreach (BuildingSelectionSquare square in mySquares)
+        {
+            if (square.myType == BuildingSelectionSquare.Type.building)
+            {
+                if (square.relativeX <= smallestX && square.relativeY <= smallestY)
+                {
+                    retSquare = square;
+                }
+            }
+        }
+        return retSquare;
     }
 
 }

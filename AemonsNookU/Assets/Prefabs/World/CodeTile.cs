@@ -9,6 +9,8 @@ public class CodeTile
     // that has data and methods. The World class will be responsible
     // for drawing the tiles using the tilemap system in unity.
 
+    public World world;
+
     public enum Type 
     {
         grass,
