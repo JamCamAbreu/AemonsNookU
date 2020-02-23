@@ -53,8 +53,8 @@ public static class BuildingInfo
                 break;
 
             case Type.BLACKSMITH:
-                //      ++
-                //      ++
+                //      +++
+                //      +++
                 //       ^
                 relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
@@ -63,24 +63,22 @@ public static class BuildingInfo
                 //      ++
                 //      ^^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
-                relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
             case Type.BOOTH_FISH:
                 //      ++
                 //      ^^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
-                relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
             case Type.BOOTH_GEMS:
-                //      ++
+                //      +
                 //      ^ 
                 relativeCoordinates.Add(Tuple.Create(0, -1));
                 break;
 
             case Type.BOOTH_SEEDS:
-                //      ++
+                //      +
                 //      ^ 
                 relativeCoordinates.Add(Tuple.Create(0, -1));
                 break;
@@ -107,11 +105,11 @@ public static class BuildingInfo
                 break;
 
             case Type.INN:
-                //      ++
-                //      ++
-                //      ^^
+                //      +++
+                //      +++
+                //      ^ ^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
-                relativeCoordinates.Add(Tuple.Create(1, -1));
+                relativeCoordinates.Add(Tuple.Create(2, -1));
                 break;
 
             case Type.ROAD:
@@ -124,14 +122,13 @@ public static class BuildingInfo
                 break;
 
             case Type.STABLES:
-                //      ++
-                //      ++
+                //      +++
+                //      +++
                 //      ^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
                 break;
 
             case Type.TANNER:
-                //      ++
                 //      ++
                 //      ^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
@@ -230,6 +227,9 @@ public static class BuildingInfo
 
                 relativeCoordinates.Add(Tuple.Create(1, 0));
                 relativeCoordinates.Add(Tuple.Create(1, 1));
+
+                relativeCoordinates.Add(Tuple.Create(2, 0));
+                relativeCoordinates.Add(Tuple.Create(2, 1));
                 break;
 
             case Type.ROAD:
@@ -244,13 +244,13 @@ public static class BuildingInfo
 
                 relativeCoordinates.Add(Tuple.Create(1, 0));
                 relativeCoordinates.Add(Tuple.Create(1, 1));
+
+                relativeCoordinates.Add(Tuple.Create(2, 0));
+                relativeCoordinates.Add(Tuple.Create(2, 1));
                 break;
 
             case Type.TANNER:
-                relativeCoordinates.Add(Tuple.Create(0, 1));
-
                 relativeCoordinates.Add(Tuple.Create(1, 0));
-                relativeCoordinates.Add(Tuple.Create(1, 1));
                 break;
 
             case Type.TAVERN:
