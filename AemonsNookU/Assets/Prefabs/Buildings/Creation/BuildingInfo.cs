@@ -107,9 +107,8 @@ public static class BuildingInfo
             case Type.INN:
                 //      +++
                 //      +++
-                //      ^ ^
-                relativeCoordinates.Add(Tuple.Create(0, -1));
-                relativeCoordinates.Add(Tuple.Create(2, -1));
+                //       ^
+                relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
             case Type.ROAD:
