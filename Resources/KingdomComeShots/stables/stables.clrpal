@@ -1,0 +1,1000 @@
+COLORTOOL v1.0
+SECTION PALETTE 223
+#7c664b #896647 #757165 #947f63 #a47f59 #908a7a #a8a18e #b49d7f #bd956a #d3bb9a #57564e #565733 #1a100b #261e12 #37291b #31251a #2e2b19 #303e12 #3d3e3b #444327 #473929 #4a3526 #55321f #5b4231 #5b4a35 #6c4b32 #6b4d3a #6c5841
+SECTION DOCUMENT 16149
+{
+ "id": "15844052133292032194",
+ "filepath": "",
+ "settings": {
+  "snap_to_grid": true,
+  "grid_size": {
+   "_t": "Vector2",
+   "value": [
+    16,
+    16
+   ]
+  },
+  "draw_grid": false,
+  "zoom": 0.25,
+  "scroll": {
+   "_t": "Vector2",
+   "value": [
+    -113.676224,
+    -65.566666
+   ]
+  },
+  "old_path_root": "C:\\Users\\coolc\\OneDrive\\Documents"
+ },
+ "objects": [
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0001",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     172,
+     122
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     343,
+     317
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/stables1pixel.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/export_stables1pixel.png",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -0.999963,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -2.808334,
+     7.499996
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0002",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     162,
+     73
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     333,
+     417
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/stables2pixel.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/export_stables2pixel.png",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -0.999679,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     11.414291,
+     13.999996
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0003",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -215,
+     96
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     378,
+     343
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/stables3pixel.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/export_stables3pixel.png",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1.966198,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -16.000015,
+     11.75
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0004",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -183,
+     77
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     320,
+     422
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/stables4pixel.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/Resources/KingdomComeShots/stables/export_stables4pixel.png",
+   "factors": {
+    "lum": 3.2,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 0.76,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     19.161892,
+     9.644054
+    ]
+   }
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0005",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.079408,
+     0.131196,
+     0.142958
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -311,
+     -119
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0006",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.088237,
+     0.328262,
+     0.517226
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -311,
+     -183
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0007",
+   "from": "Clr0006",
+   "to": "Clr0005",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0008",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.051361,
+     0.67532,
+     0.010023
+    ]
+   },
+   "color_space": "Linear HSV",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -231,
+     -119
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0009",
+   "from": "Clr0005",
+   "to": "Clr0008",
+   "steps": 4,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr000B",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.223267,
+     0.004437,
+     0.047531
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -135,
+     -183
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr000C",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.11825,
+     0.121075,
+     0.357676
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -135,
+     -119
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp000D",
+   "from": "Clr000B",
+   "to": "Clr000C",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr000F",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.050776,
+     0.104716,
+     0.08739
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -311,
+     -71
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0010",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.086676,
+     0.013334,
+     0.013843
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -247,
+     -71
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0011",
+   "from": "Clr000F",
+   "to": "Clr0010",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0012",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.071471,
+     0.364753,
+     0.333543
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -311,
+     -39
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0013",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.03931,
+     0.07714,
+     0.043114
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -247,
+     -39
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0014",
+   "from": "Clr0012",
+   "to": "Clr0013",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0015",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.24032,
+     0.042123,
+     0.041173
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -359,
+     -119
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0019",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.172012,
+     0.061972,
+     0.089948
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -231,
+     -167
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp001A",
+   "from": "Clr0019",
+   "to": "Clr0008",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -121,7 +121,6 @@ public class BuildingSelection : MonoBehaviour
             else
             {
                 createdBuilding.Entrances.Add(square.TileUnderneath);
-
                 // Add signpost to path?
             }
         }

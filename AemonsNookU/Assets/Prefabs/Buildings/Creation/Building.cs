@@ -47,11 +47,11 @@ public class Building : MonoBehaviour
     {
         if (Rotation == BuildingSelection.Rotation.none || Rotation == BuildingSelection.Rotation.twoClock)
         {
-            this.transform.position = new Vector2(originX + tilesWide/2.0f + offset, originY + tilesTall/2.0f + offset);
+            this.transform.position = new Vector2(originX - offset, originY - offset);
         }
         else
         {
-            this.transform.position = new Vector2(originX + tilesTall/2.0f + offset, originY + tilesWide/2.0f + offset);
+            this.transform.position = new Vector2(originX - offset, originY - offset);
         }
     }
 

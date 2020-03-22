@@ -15,14 +15,35 @@ public class World : MonoBehaviour
 
 
     #region INTERFACE
-    // Start is called before the first frame update
-    void Start()
+
+    // Awake is always called first
+    private void Awake()
     {
         InitGameFramerate();
 
         Level test = new Level01();
         LoadLevel(test);
+
+        treeList = new GameObject("Trees");
+        treeList.transform.SetParent(this.transform);
+
+        stoneList = new GameObject("Stones");
+        stoneList.transform.SetParent(this.transform);
+
+        peepList = new GameObject("Peeps");
+        peepList.transform.SetParent(this.transform);
     }
+
+
+    // Start is called after awake, before the first update
+    void Start()
+    {
+        GrowTrees();
+        GrowStone();
+
+        TileMapUpdate();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -45,6 +66,11 @@ public class World : MonoBehaviour
     public int WorldWidth;
     public int WorldHeight;
     private CodeTile[][] WorldTiles;
+
+    // Resources:
+    public GameObject treeList;
+    public GameObject stoneList;
+    public GameObject peepList;
 
     public ResourceGenerator resourceGenerator;
     private List<CodeTile> TreeTiles = new List<CodeTile>();
@@ -103,7 +129,9 @@ public class World : MonoBehaviour
         foreach (CodeTile t in TreeTiles)
         {
             // adds 1 to 3 trees to tile:
-            t.Resources.AddRange(resourceGenerator.GenerateTreesPos(t.posX, t.posY, 1, 3));
+            List<Clickable> newTrees = resourceGenerator.GenerateTreesPos(t.posX, t.posY, 1, 3);
+            foreach (var tree in newTrees) { tree.transform.SetParent(treeList.transform); }
+            t.Resources.AddRange(newTrees);
         }
     }
 
@@ -111,8 +139,10 @@ public class World : MonoBehaviour
     {
         foreach (CodeTile t in StoneTiles)
         {
-            // adds 1 to 3 trees to tile:
-            t.Resources.AddRange(resourceGenerator.GenerateStonesPos(t.posX, t.posY, 2, 4));
+            // adds 1 to 3 stones to tile:
+            List<Clickable> newStones = resourceGenerator.GenerateStonesPos(t.posX, t.posY, 2, 4);
+            foreach (var stone in newStones) { stone.transform.SetParent(stoneList.transform); }
+            t.Resources.AddRange(newStones);
         }
     }
 
@@ -123,6 +153,7 @@ public class World : MonoBehaviour
     public void ClearTiles()
     {
         topMap.ClearAllTiles();
+        midMap.ClearAllTiles();
         botMap.ClearAllTiles();
         codeTilesReady = false;
     }
@@ -169,10 +200,6 @@ public class World : MonoBehaviour
 
         string levelCode = lev.GetLevelCode();
         LoadTileTypesFromLevel(levelCode);
-        GrowTrees();
-        GrowStone();
-
-        TileMapUpdate();
 
 
     }

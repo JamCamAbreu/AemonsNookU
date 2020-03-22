@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd19bc1670e7a343ac3ccc561a6076a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetPos: {x: 0, y: 0, z: 0}
   MapHeight: 12
   MapWidth: 12
   tileDimension: 32
@@ -105,6 +106,7 @@ MonoBehaviour:
   panSpeed: 5
   panBorderThickness: 0
   scrollSpeed: 1
+  targetZoom: 0
 --- !u!1 &3361191088942553574
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +153,7 @@ Tilemap:
   m_TileSpriteArray: []
   m_TileMatrixArray: []
   m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
@@ -188,6 +191,7 @@ TilemapRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -267,8 +271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6a2831976ed2e4083442a738b316e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetFramerate: 60
+  currentPlayer: {fileID: 0}
   WorldWidth: 15
   WorldHeight: 15
+  treeList: {fileID: 0}
   resourceGenerator: {fileID: 116498897121487829}
   cameraPrefab: {fileID: 4477766397415594532}
   grass: {fileID: 11400000, guid: bca912d6a5770f042a05f7b985e31b3a, type: 2}
@@ -278,6 +285,7 @@ MonoBehaviour:
   midMap: {fileID: 8085916317950852037}
   botMap: {fileID: 2632334600141779103}
   peepGenerator: {fileID: 8474806456331284936}
+  notificationCanvas: {fileID: 0}
 --- !u!1 &7529148873450872551
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +332,7 @@ Tilemap:
   m_TileSpriteArray: []
   m_TileMatrixArray: []
   m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
@@ -361,6 +370,7 @@ TilemapRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -439,6 +449,7 @@ Tilemap:
   m_TileSpriteArray: []
   m_TileMatrixArray: []
   m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
@@ -476,6 +487,7 @@ TilemapRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

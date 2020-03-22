@@ -74,6 +74,8 @@ public class PeepGenerator : MonoBehaviour
         if (SpawnRoadTiles.Count > 0)
         {
             Peep peep = Object.Instantiate(peepPrefab);
+            peep.name = $"{peep.Type.ToString()} - {peep.FirstName} {peep.SirName}";
+            peep.transform.SetParent(this.MyWorld.peepList.transform);
             peep.MyPeepGenerator = this;
             peep.notificationCanvas = notificationCanvas;
             UpdatePeepCloths(peep);
@@ -137,6 +139,7 @@ public class PeepGenerator : MonoBehaviour
                 case PeepInfo.Type.monk: this.GenerateTaskMonk(peep); break;
                 case PeepInfo.Type.nun: this.GenerateTaskNun(peep); break;
                 case PeepInfo.Type.priest: this.GenerateTaskPriest(peep); break;
+                case PeepInfo.Type.bishop: this.GenerateTaskBishop(peep); break;
                 case PeepInfo.Type.knight: this.GenerateTaskKnight(peep); break;
                 case PeepInfo.Type.quester: this.GenerateTaskQuester(peep); break;
                 case PeepInfo.Type.foreigner: this.GenerateTaskForeigner(peep); break;
@@ -202,6 +205,12 @@ public class PeepGenerator : MonoBehaviour
     }
 
     public void GenerateTaskPriest(Peep peep)
+    {
+        CodeTile ranRoad = GetRandomRoadTile();
+        peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
+    }
+
+    public void GenerateTaskBishop(Peep peep)
     {
         CodeTile ranRoad = GetRandomRoadTile();
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
@@ -279,6 +288,7 @@ public class PeepGenerator : MonoBehaviour
             case PeepInfo.Type.monk:
             case PeepInfo.Type.nun:
             case PeepInfo.Type.priest:
+            case PeepInfo.Type.bishop:
                 p.rend.sprite = Purple;
                 break;
 
