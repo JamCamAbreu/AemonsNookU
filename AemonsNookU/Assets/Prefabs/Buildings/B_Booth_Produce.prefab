@@ -100,7 +100,7 @@ MonoBehaviour:
   Name: 
   Description: 
   Rotation: 0
-  normal: {fileID: 0}
+  normal: {fileID: 21300000, guid: 13e610055e55ea946a017cb556d52a34, type: 3}
   clockOne: {fileID: 0}
   clockTwo: {fileID: 0}
   clockThree: {fileID: 0}

@@ -21,7 +21,7 @@ public class World : MonoBehaviour
     {
         InitGameFramerate();
 
-        Level test = new Level01();
+        Level test = new Level02();  // Todo, later have a menu too choose a level
         LoadLevel(test);
 
         treeList = new GameObject("Trees");

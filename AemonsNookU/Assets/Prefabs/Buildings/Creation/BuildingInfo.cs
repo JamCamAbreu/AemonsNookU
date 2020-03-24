@@ -63,12 +63,14 @@ public static class BuildingInfo
                 //      ++
                 //      ^^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
+                relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
             case Type.BOOTH_FISH:
                 //      ++
                 //      ^^
                 relativeCoordinates.Add(Tuple.Create(0, -1));
+                relativeCoordinates.Add(Tuple.Create(1, -1));
                 break;
 
             case Type.BOOTH_GEMS:
