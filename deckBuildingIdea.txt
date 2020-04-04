@@ -1,0 +1,63 @@
+
+
+Deck Building ideas for Aemon's Nook
+
+
+Premise, Why I want to do this: 
+	- Having an ordinary "build menu" is boring I feel. 
+	- The code for building placement is totally decoupled, so I really don't need to adhere to anything I've already written.
+
+
+
+Main Ideas:
+	- Clickable 'cards' will appear on the screen for the user to click on.
+	- Your 'hand' will start with just two slots. Eventually, there might be a card that upgrades your hand size.
+	- The deck moves new cards into your hand over time:
+		- The top of the deck has a circle timer, and when it finishes it will poof a card into your hand, shifting the cards in your hand over a slot.
+		- The chance to use a card in your hand will be gone when a card is shifted off your last hand slot (leftmost? slot) and goes to the discard pile.
+		- Optional: If you choose to discard a card in your hand, it will slightly decrease the cooldown for the next card. But you might regret it so be careful! 
+	
+	Types of Cards:
+		- Some of these cards will be buildings, just like the buildmenu buildings, but not ONLY buildings.
+			- Buildings will still cost money, but having a building card ALLOWS you to build it if you have the resources.
+		- Some 'cards' will be "gain x resources" of varying types.
+		- Some cards will have "decorations" (see below)
+		- Some cards will let you destroy cards in your deck
+		- Some cards will be bad things. 
+			- As soon as they are shifted out of your hand, they are played. 
+			- You can play them early, if you want to get it over with and want that small time bonus on the next card in the queue
+			- Examples:
+				- A wolf
+				- rain
+				- sickness
+				- taxes
+		
+	Starting Decks:
+		- A map will define the starting "deck" of cards you will start off with.
+			- This starting deck will set the unique tone for each level's challenges
+				- Some starting decks will be small, giving you exactly what you want quickly.
+				- Other decks will initially clutter your deck with a bunch of lame stuff, and the goal is to clean it out
+			
+	Buying Cards:
+		- Idea: Once every time you run out of cards (aka time to reshuffle), you will be presented with 3 cards you can buy
+		- Certain buildings will provide the ability to buy more cards, perhaps only after so many customers have visited and spent money, etc...
+	
+	
+	
+Other Ideas:
+	- "Decoration"
+		- I should use some of those smaller homemade sprites, such as "bucket", "bath", flowers. 
+		- These will be similar to buildings, except that they don't interact with peeps. 
+		- As long as they are placed closeish to the road (nearest road), then they will boost the whole map with some value. 
+		- Flowers will attract women and rich people.
+		- Similar to decorations in Roller Coaster Tycoon
+		- Ideas for extension:
+			- benches
+			- campire
+	
+
+
+
+
+
+
