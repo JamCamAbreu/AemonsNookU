@@ -8,7 +8,10 @@ public class CardHand : MonoBehaviour
     public int maxHandSize;
     public float MinDistance = 30f;
 
-    // References:
+    // Unity References:
+    public CardDiscard discard;
+    public CardDeck deck;
+
     public Card cardAsset;
     public Player player;
     public World world;
@@ -140,37 +143,37 @@ public class CardHand : MonoBehaviour
     public void DebugKeys()
     {
 
-        if (Input.GetKeyDown("1"))
-        {
-            if (slots.Count < maxHandSize)
-            {
-                Card debugCard = Instantiate(cardAsset, this.transform.position, this.transform.rotation, this.transform);
-                debugCard.hand = this;
-                slots.Enqueue(debugCard);
-                notificationCanvas.AddNotification(Notification.Type.userAction, $"Adding card to hand.");
+        //if (Input.GetKeyDown("1"))
+        //{
+        //    if (slots.Count < maxHandSize)
+        //    {
+        //        Card debugCard = Instantiate(cardAsset, this.transform.position, this.transform.rotation, this.transform);
+        //        debugCard.hand = this;
+        //        slots.Enqueue(debugCard);
+        //        notificationCanvas.AddNotification(Notification.Type.userAction, $"Adding card to hand.");
 
-                PositionCards();
-                DebugNameCards();
-            }
-            else
-            {
-                notificationCanvas.AddNotification(Notification.Type.userAction, $"Could not add card to hand, max hand size is {maxHandSize}");
-            }
+        //        PositionCards();
+        //        DebugNameCards();
+        //    }
+        //    else
+        //    {
+        //        notificationCanvas.AddNotification(Notification.Type.userAction, $"Could not add card to hand, max hand size is {maxHandSize}");
+        //    }
 
-        }
+        //}
 
-        if (Input.GetKeyDown("2"))
-        {
-            if (slots.Count > 0)
-            {
-                var deleteCard = slots.Dequeue();
-                deleteCard.transform.SetParent(null);
-                Object.Destroy(deleteCard);
+        //if (Input.GetKeyDown("2"))
+        //{
+        //    if (slots.Count > 0)
+        //    {
+        //        var deleteCard = slots.Dequeue();
+        //        deleteCard.transform.SetParent(null);
+        //        Object.Destroy(deleteCard);
 
-                PositionCards();
-                DebugNameCards();
-            }
-        }
+        //        PositionCards();
+        //        DebugNameCards();
+        //    }
+        //}
 
     }
 

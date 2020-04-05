@@ -50,7 +50,6 @@ MonoBehaviour:
   world: {fileID: 0}
   notificationCanvas: {fileID: 0}
   SpreadAngle: 0
-  lastClosest: {fileID: 0}
 --- !u!1 &8209085067955461012
 GameObject:
   m_ObjectHideFlags: 0

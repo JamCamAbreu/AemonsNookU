@@ -6,7 +6,19 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
+
+    public enum CardState
+    {
+        deck,
+        hand,
+        discard
+    }
+
+    public CardState state { get; set; }
+    public CardDeck deck { get; set; }
     public CardHand hand { get; set; }
+    public CardDiscard discard { get; set; }
+
     Vector3 cachedScale;
     public int cardNum;
 
