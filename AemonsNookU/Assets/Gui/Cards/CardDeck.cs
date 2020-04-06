@@ -3,20 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardDeck : MonoBehaviour
+public class CardDeck : CardGroup
 {
-
-    // Unity References:
-    public CardHand hand;
-    public CardDiscard discard;
-
-    public Card cardAsset;
-    public Player player;
-    public World world;
-    public NotificationCanvas notificationCanvas;
-
-    // Non-Unity
-    public Stack<Card> deck = new Stack<Card>();
+    public override Card.CardState cardState
+    {
+        get
+        {
+            return Card.CardState.deck;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +23,7 @@ public class CardDeck : MonoBehaviour
     void Update()
     {
         DebugKeys();
+        PositionCards();
     }
 
     #region Interface
@@ -46,10 +42,6 @@ public class CardDeck : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    public void Shuffle()
-    {
-        throw new NotImplementedException();
-    }
 
     public Card DrawCard()
     {
@@ -67,60 +59,49 @@ public class CardDeck : MonoBehaviour
         throw new NotImplementedException();
     }
 
+
     #endregion interface
 
-    public void DebugNameCards()
-    {
-        int i = 1;
-        foreach (Card card in deck)
-        {
-            card.name = $"card {i}";
-            i++;
-        }
-    }
 
-    public void PositionCards()
+    public override void PositionCards()
     {
-        if (deck.Count > 0)
+        if (cards.Count > 0)
         {
             float deckX = this.transform.position.x;
             float deckY = this.transform.position.y;
 
             int i = 0;
-            foreach (Card card in deck)
+            foreach (Card card in cards)
             {
-                card.transform.position = new Vector2(deckX + i*2, deckY + i*2);
+                card.TargetPos = new Vector2(deckX - i*2, deckY + i*2);
                 i++;
             }
         }
     }
+
 
     public void DebugKeys()
     {
 
         if (Input.GetKeyDown("1"))
         {
-            Card debugCard = Instantiate(cardAsset, this.transform.position, this.transform.rotation, this.transform);
+            Vector2 spawnPos = new Vector2(this.transform.position.x + 10, this.transform.position.y - 50);
+            Card debugCard = Instantiate(cardAsset, spawnPos, this.transform.rotation, this.transform);
             debugCard.deck = this;
             debugCard.hand = this.hand;
             debugCard.discard = this.discard;
             debugCard.state = Card.CardState.deck;
 
-            deck.Push(debugCard);
             notificationCanvas.AddNotification(Notification.Type.userAction, $"Adding card to hand.");
-
-            PositionCards();
-            DebugNameCards();
+            AddCard(debugCard, true);
         }
 
         if (Input.GetKeyDown("2"))
         {
-            if (deck.Count > 0)
+            if (cards.Count > 0)
             {
-                var deleteCard = deck.Pop();
-                deleteCard.transform.SetParent(this.hand.transform);
-                deleteCard.state = Card.CardState.hand;
-                this.hand.PositionCards();
+                var deleteCard = PullFirstCard();
+                hand.AddCard(deleteCard);
 
                 PositionCards();
                 DebugNameCards();

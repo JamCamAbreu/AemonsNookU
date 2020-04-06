@@ -13,6 +13,10 @@ public class Card : MonoBehaviour
         hand,
         discard
     }
+    public Vector2 TargetPos { get; set; }
+    private int HasNewPosition { get; set; }
+
+    public Quaternion TargetRot { get; set; }
 
     public CardState state { get; set; }
     public CardDeck deck { get; set; }
@@ -25,14 +29,38 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         cachedScale = transform.localScale;
+        TargetPos = this.transform.position;
+        cachedScale = transform.localScale;
+        TargetRot = this.transform.rotation;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (HasNewPosition > 0)
+        {
+            if (HasNewPosition == 1)
+            {
+                this.TargetPos = this.transform.position;
+            }
+            HasNewPosition--;
+        }
+        else
+        {
+            UpdatePosition();
+            UpdateRotation();
+        }
+    }
+
+    protected void UpdatePosition()
+    {
+        this.transform.position = GlobalMethods.Ease((Vector2)this.transform.position, TargetPos, 0.1f);
+    }
+
+    protected void UpdateRotation()
+    {
+        this.transform.rotation = GlobalMethods.Ease((Quaternion)this.transform.rotation, TargetRot, 0.1f);
     }
 
     public void EnterClosest()

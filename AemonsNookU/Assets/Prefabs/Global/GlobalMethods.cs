@@ -29,6 +29,17 @@ public class GlobalMethods
         return (Vector3)(curVal + (targetVal - curVal) * speed);
     }
 
+    public static Quaternion Ease(Quaternion curVal, Quaternion targetVal, float speed)
+    {
+        // a * b                          == (a + b)
+        // a * inverse(b)                 == (a - b)
+        // slerp(a, speed)                == (a * speed) 
+
+        Quaternion first = targetVal * Quaternion.Inverse(curVal);
+        Quaternion second = Quaternion.Slerp(Quaternion.identity, first, speed);
+        return (Quaternion)(curVal * second);
+    }
+
     public static void Rot90(BuildingSelectionSquare input)
     {
         int preX = input.relativeX;
