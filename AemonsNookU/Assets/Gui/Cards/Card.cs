@@ -7,12 +7,28 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
 
+    public enum FlipFrom
+    {
+        FromLeft,
+        FromRight
+        // FromBottom
+        // FromTop
+    }
     public enum CardState
     {
         deck,
         hand,
         discard
     }
+
+    public enum Side
+    {
+        Front,
+        Back
+    }
+
+    public Side FacingSide { get; set; }
+
     public Vector2 TargetPos { get; set; }
     private int HasNewPosition { get; set; }
 
@@ -23,15 +39,18 @@ public class Card : MonoBehaviour
     public CardHand hand { get; set; }
     public CardDiscard discard { get; set; }
 
+
+
     Vector3 cachedScale;
     public int cardNum;
 
     // Start is called before the first frame update
     void Start()
     {
-        TargetPos = this.transform.position;
+        FacingSide = Side.Back;
         cachedScale = transform.localScale;
-        TargetRot = this.transform.rotation;
+        if(TargetPos == null) { TargetPos = this.transform.position; }
+        if (TargetRot == null) { TargetRot = this.transform.rotation; }
     }
 
 
@@ -52,6 +71,36 @@ public class Card : MonoBehaviour
             UpdateRotation();
         }
     }
+
+
+    public void SetCardSide(Side side)
+    {
+        if (side == Side.Back)
+        {
+            // set back visible = true
+            // turn off other things
+        }
+        else if (side == Side.Front)
+        {
+            // set front visible = true
+            // set back visible = false
+            // turn on visibility of other things
+        }
+    }
+
+
+    public void DebugKeys()
+    {
+        if (Input.GetKeyDown("3")) {
+            Flip(0.5f, FlipFrom.FromLeft);
+        }
+    }
+
+    public void Flip(float seconds, FlipFrom fromSide)
+    {
+
+    }
+
 
     protected void UpdatePosition()
     {

@@ -87,6 +87,8 @@ public class CardDeck : CardGroup
         {
             Vector2 spawnPos = new Vector2(this.transform.position.x + 10, this.transform.position.y - 50);
             Card debugCard = Instantiate(cardAsset, spawnPos, this.transform.rotation, this.transform);
+            debugCard.transform.rotation = Quaternion.Euler(0, 0, -40);
+            debugCard.TargetRot = Quaternion.Euler(0, 0, 0);
             debugCard.deck = this;
             debugCard.hand = this.hand;
             debugCard.discard = this.discard;
