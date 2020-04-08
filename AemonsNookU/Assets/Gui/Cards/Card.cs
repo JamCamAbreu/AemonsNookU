@@ -7,13 +7,19 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
 
-    public enum FlipFrom
+    public GameObject CardFront;
+    public GameObject CardBack;
+    public GameObject CardTitle;
+    public GameObject Logo;
+
+
+    public enum FlipState
     {
-        FromLeft,
-        FromRight
-        // FromBottom
-        // FromTop
+        None,
+        StartFlip,
+        EndFlip
     }
+
     public enum CardState
     {
         deck,
@@ -30,7 +36,6 @@ public class Card : MonoBehaviour
     public Side FacingSide { get; set; }
 
     public Vector2 TargetPos { get; set; }
-    private int HasNewPosition { get; set; }
 
     public Quaternion TargetRot { get; set; }
 
@@ -39,6 +44,7 @@ public class Card : MonoBehaviour
     public CardHand hand { get; set; }
     public CardDiscard discard { get; set; }
 
+    FlipState flipState { get; set; }
 
 
     Vector3 cachedScale;
@@ -51,25 +57,17 @@ public class Card : MonoBehaviour
         cachedScale = transform.localScale;
         if(TargetPos == null) { TargetPos = this.transform.position; }
         if (TargetRot == null) { TargetRot = this.transform.rotation; }
+        flipState = FlipState.None;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (HasNewPosition > 0)
-        {
-            if (HasNewPosition == 1)
-            {
-                this.TargetPos = this.transform.position;
-            }
-            HasNewPosition--;
-        }
-        else
-        {
-            UpdatePosition();
-            UpdateRotation();
-        }
+        DebugKeys();
+
+        UpdatePosition();
+        UpdateRotation();
     }
 
 
@@ -77,29 +75,35 @@ public class Card : MonoBehaviour
     {
         if (side == Side.Back)
         {
-            // set back visible = true
-            // turn off other things
+            CardFront.SetActive(false);
+            CardBack.SetActive(true);
+            CardTitle.SetActive(false);
+            Logo.SetActive(false);
+            this.FacingSide = Side.Back;
         }
         else if (side == Side.Front)
         {
-            // set front visible = true
-            // set back visible = false
-            // turn on visibility of other things
+            CardFront.SetActive(true);
+            CardBack.SetActive(false);
+            CardTitle.SetActive(true);
+            Logo.SetActive(true);
+            this.FacingSide = Side.Front;
         }
     }
 
+    public void Flip()
+    {
+        this.TargetRot = Quaternion.Euler(this.transform.rotation.x, 150, this.transform.rotation.z);
+        this.flipState = FlipState.StartFlip;
+    }
 
     public void DebugKeys()
     {
         if (Input.GetKeyDown("3")) {
-            Flip(0.5f, FlipFrom.FromLeft);
+            Flip();
         }
     }
 
-    public void Flip(float seconds, FlipFrom fromSide)
-    {
-
-    }
 
 
     protected void UpdatePosition()
@@ -110,6 +114,20 @@ public class Card : MonoBehaviour
     protected void UpdateRotation()
     {
         this.transform.rotation = GlobalMethods.Ease((Quaternion)this.transform.rotation, TargetRot, 0.1f);
+
+        // Check for flip:
+        if (this.flipState == FlipState.StartFlip && Mathf.Abs(this.transform.rotation.eulerAngles.y) >= 89f)
+        {
+            if (FacingSide == Side.Back) { SetCardSide(Side.Front); }
+            else { SetCardSide(Side.Back); }
+
+            this.TargetRot = Quaternion.Euler(this.transform.rotation.x, 0, this.transform.rotation.z);
+            this.flipState = FlipState.EndFlip;
+        }
+        else if (this.flipState == FlipState.EndFlip && Mathf.Abs(this.transform.rotation.eulerAngles.y) <= 1f)
+        {
+            this.flipState = FlipState.None;
+        }
     }
 
     public void EnterClosest()

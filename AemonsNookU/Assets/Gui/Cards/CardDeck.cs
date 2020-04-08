@@ -93,6 +93,7 @@ public class CardDeck : CardGroup
             debugCard.hand = this.hand;
             debugCard.discard = this.discard;
             debugCard.state = Card.CardState.deck;
+            debugCard.SetCardSide(Card.Side.Back);
 
             notificationCanvas.AddNotification(Notification.Type.userAction, $"Adding card to hand.");
             AddCard(debugCard, true);
@@ -103,6 +104,7 @@ public class CardDeck : CardGroup
             if (cards.Count > 0)
             {
                 var deleteCard = PullFirstCard();
+                deleteCard.Flip();
                 hand.AddCard(deleteCard);
 
                 PositionCards();

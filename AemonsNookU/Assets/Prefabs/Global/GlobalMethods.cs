@@ -29,6 +29,8 @@ public class GlobalMethods
         return (Vector3)(curVal + (targetVal - curVal) * speed);
     }
 
+
+    // Note: Does not support negative values:
     public static Quaternion Ease(Quaternion curVal, Quaternion targetVal, float speed)
     {
         // a * b                          == (a + b)
@@ -39,6 +41,16 @@ public class GlobalMethods
         Quaternion second = Quaternion.Slerp(Quaternion.identity, first, speed);
         return (Quaternion)(curVal * second);
     }
+
+    // Supports negative values but doesn't do as good as above overall
+    //public static Quaternion Ease(Quaternion curVal, Quaternion targetVal, float speed)
+    //{
+    //    float newX = Ease(curVal.eulerAngles.x, targetVal.eulerAngles.x, speed);
+    //    float newY = Ease(curVal.eulerAngles.y, targetVal.eulerAngles.y, speed);
+    //    float newZ = Ease(curVal.eulerAngles.z, targetVal.eulerAngles.z, speed);
+    //    return Quaternion.Euler(newX, newY, newZ);
+    //}
+
 
     public static void Rot90(BuildingSelectionSquare input)
     {

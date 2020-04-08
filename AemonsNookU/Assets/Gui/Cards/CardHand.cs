@@ -133,7 +133,7 @@ public class CardHand : CardGroup
                 float fullRotDeg = (float)System.Math.Pow((numCards - 1), 0.5f) * 14;
                 float rotationPerCard = fullRotDeg / numCards;
                 float zRot = (0 - fullRotDeg/2 + (position - 1)*rotationPerCard) * Mathf.Deg2Rad;
-                card.TargetRot = new Quaternion(card.transform.rotation.x, card.transform.rotation.y, zRot, card.transform.rotation.w);
+                card.TargetRot = new Quaternion(card.TargetRot.x, card.TargetRot.y, zRot, card.TargetRot.w);
 
                 // Sibling Index:
                 card.cardNum = position - 1;
