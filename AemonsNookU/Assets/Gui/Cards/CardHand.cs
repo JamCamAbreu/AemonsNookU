@@ -75,8 +75,8 @@ public class CardHand : CardGroup
         {
             if (closest != lastClosest)
             {
-                if (lastClosest != null) { lastClosest.ExitClosest(); }
-                closest.EnterClosest();
+                if (lastClosest != null) { lastClosest.MouseExitClosestCard(); }
+                closest.MouseEnterClosestCard();
                 lastClosest = closest;
             }
         }
@@ -84,7 +84,7 @@ public class CardHand : CardGroup
         {
             if (lastClosest != null)
             {
-                lastClosest.ExitClosest();
+                lastClosest.MouseExitClosestCard();
                 lastClosest = null;
             }
         }

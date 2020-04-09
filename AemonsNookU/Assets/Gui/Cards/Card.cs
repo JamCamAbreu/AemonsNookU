@@ -13,6 +13,14 @@ public class Card : MonoBehaviour
     public GameObject Logo;
 
 
+    public enum TransitionType
+    {
+        None,
+        DeckExplode
+    }
+
+    public TransitionType transitionType { get; set; }
+
     public enum FlipState
     {
         None,
@@ -53,11 +61,12 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FacingSide = Side.Back;
-        cachedScale = transform.localScale;
+        this.FacingSide = Side.Back;
+        this.cachedScale = transform.localScale;
         if(TargetPos == null) { TargetPos = this.transform.position; }
         if (TargetRot == null) { TargetRot = this.transform.rotation; }
-        flipState = FlipState.None;
+        this.flipState = FlipState.None;
+        this.transitionType = TransitionType.None;
     }
 
 
@@ -91,7 +100,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void Flip()
+    public void BeginFlip()
     {
         this.TargetRot = Quaternion.Euler(this.transform.rotation.x, 150, this.transform.rotation.z);
         this.flipState = FlipState.StartFlip;
@@ -100,7 +109,7 @@ public class Card : MonoBehaviour
     public void DebugKeys()
     {
         if (Input.GetKeyDown("3")) {
-            Flip();
+            BeginFlip();
         }
     }
 
@@ -109,6 +118,16 @@ public class Card : MonoBehaviour
     protected void UpdatePosition()
     {
         this.transform.position = GlobalMethods.Ease((Vector2)this.transform.position, TargetPos, 0.1f);
+
+        if (this.transitionType != TransitionType.None && Vector2.Distance((Vector2)this.transform.position, this.TargetPos) <= 2f)
+        {
+            if (this.transitionType == TransitionType.DeckExplode)
+            {
+                this.transitionType = TransitionType.None;
+                this.deck.CheckTransitionComplete(this);
+            }
+
+        }
     }
 
     protected void UpdateRotation()
@@ -130,13 +149,13 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void EnterClosest()
+    public void MouseEnterClosestCard()
     {
         transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         transform.SetAsLastSibling();
     }
 
-    public void ExitClosest()
+    public void MouseExitClosestCard()
     {
         transform.localScale = cachedScale;
         transform.SetSiblingIndex(cardNum);

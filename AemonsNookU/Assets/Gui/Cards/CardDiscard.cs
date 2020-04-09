@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CardDiscard : CardGroup
 {
-
     public int MaxPileWidth;
     public int MaxPileHeight;
     public int MaxPileSize = 300;
@@ -18,6 +17,10 @@ public class CardDiscard : CardGroup
             return Card.CardState.discard;
         }
     }
+
+    public bool SendingCardsToDeck { get; set; }
+    public int SendingCardsToDeckAlarm { get; set; }
+    public int SendingCardsToDeckAlarmReset { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +36,42 @@ public class CardDiscard : CardGroup
             ranXList.Add(ranX);
             ranYList.Add(ranY);
         }
+
+        SendingCardsToDeck = false;
+        SendingCardsToDeckAlarm = 0;
+        SendingCardsToDeckAlarmReset = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         PositionCards();
+        DebugKeys();
+        CheckSendingCardsToDeck();
+    }
+
+    public void CheckSendingCardsToDeck()
+    {
+        if (SendingCardsToDeck)
+        {
+            if (cards.Count > 0)
+            {
+                if (SendingCardsToDeckAlarm > 0) { SendingCardsToDeckAlarm--; }
+                else
+                {
+                    Card card = PullLastCard();
+                    card.BeginFlip();
+                    this.deck.AddCard(card, true, true);
+                    SendingCardsToDeckAlarm = SendingCardsToDeckAlarmReset;
+                }
+
+            }
+            else
+            {
+                this.deck.DelayShuffleExplode(45, 70);
+                SendingCardsToDeck = false;
+            }
+        }
     }
 
 
@@ -63,5 +96,26 @@ public class CardDiscard : CardGroup
             }
         }
     }
+
+
+    public void SendCardsToDeck(int transitionInterval)
+    {
+        SendingCardsToDeck = true;
+        SendingCardsToDeckAlarm = transitionInterval;
+        SendingCardsToDeckAlarmReset = transitionInterval;
+
+    }
+
+    public void DebugKeys()
+    {
+        if (Input.GetKeyDown("9"))
+        {
+            if (cards.Count > 0)
+            {
+                SendCardsToDeck(Math.Max(25/cards.Count, 1));
+            }
+        }
+    }
+
 
 }

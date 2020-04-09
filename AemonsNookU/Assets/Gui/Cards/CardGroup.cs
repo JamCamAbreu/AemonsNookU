@@ -20,12 +20,8 @@ public abstract class CardGroup : MonoBehaviour
     public abstract Card.CardState cardState { get; }
 
 
-    public virtual void Shuffle()
-    {
-        throw new NotImplementedException();
-    }
 
-    public void AddCard(Card card, bool addToFront = false)
+    public void AddCard(Card card, bool addToFront = false, bool reposition = false)
     {
         if (addToFront)
         {
@@ -39,17 +35,20 @@ public abstract class CardGroup : MonoBehaviour
         card.state = cardState;
         card.transform.SetParent(this.transform);
 
+        if (reposition)
+        {
+            PositionCards();
+        }
+
         DebugNameCards();
     }
 
 
     public virtual void DebugNameCards()
     {
-        int i = 1;
-        foreach (Card card in cards)
+        for (int i = 0; i < cards.Count; i++)
         {
-            card.name = $"card {i}";
-            i++;
+            cards[i].name = $"card {i}";
         }
     }
 

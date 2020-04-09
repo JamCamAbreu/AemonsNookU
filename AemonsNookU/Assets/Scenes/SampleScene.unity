@@ -1571,12 +1571,12 @@ PrefabInstance:
     - target: {fileID: 3710347673195060925, guid: 848760b334e8e8d459119ed492ee5a9d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -400
+      value: -460
       objectReference: {fileID: 0}
     - target: {fileID: 3710347673195060925, guid: 848760b334e8e8d459119ed492ee5a9d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220
+      value: -240
       objectReference: {fileID: 0}
     - target: {fileID: 4671357412686961434, guid: 848760b334e8e8d459119ed492ee5a9d,
         type: 3}
@@ -5025,12 +5025,27 @@ PrefabInstance:
     - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: Started
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: MaxPeeps
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: CreationAlarmResetMin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474806456331284936, guid: 426022c3bb3b2db4494b050741a77e13,
+        type: 3}
+      propertyPath: CreationAlarmResetMax
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 426022c3bb3b2db4494b050741a77e13, type: 3}
