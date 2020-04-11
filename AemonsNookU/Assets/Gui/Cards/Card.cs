@@ -130,6 +130,8 @@ public class Card : MonoBehaviour
         }
     }
 
+
+
     protected void UpdateRotation()
     {
         this.transform.rotation = GlobalMethods.Ease((Quaternion)this.transform.rotation, TargetRot, 0.1f);

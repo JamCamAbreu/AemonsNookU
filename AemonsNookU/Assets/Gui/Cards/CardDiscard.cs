@@ -25,6 +25,10 @@ public class CardDiscard : CardGroup
     // Start is called before the first frame update
     void Start()
     {
+        TargetPosition = this.transform.position;
+        NormalPosition = this.transform.position;
+        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
+
         UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
 
         ranXList = new List<int>();
@@ -48,6 +52,9 @@ public class CardDiscard : CardGroup
         PositionCards();
         DebugKeys();
         CheckSendingCardsToDeck();
+        UpdateScale();
+
+        this.transform.position = GlobalMethods.Ease((Vector2)this.transform.position, TargetPosition, 0.1f);
     }
 
     public void CheckSendingCardsToDeck()
@@ -79,8 +86,8 @@ public class CardDiscard : CardGroup
     {
         if (cards.Count > 0)
         {
-            float parentX = this.transform.position.x;
-            float parentY = this.transform.position.y;
+            float parentX = this.TargetPosition.x;
+            float parentY = this.TargetPosition.y;
 
             int i = 0;
             foreach (Card card in cards)

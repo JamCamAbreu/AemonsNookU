@@ -21,6 +21,9 @@ public class CardDeck : CardGroup
         DelayShuffle = false;
         DelayShuffleTimer = 0;
         DelayShuffleRadius = 0;
+        TargetPosition = this.transform.position;
+        NormalPosition = this.transform.position;
+        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
     }
 
     // Update is called once per frame
@@ -28,34 +31,31 @@ public class CardDeck : CardGroup
     {
         DebugKeys();
         CheckDelayShuffleTimer();
+        UpdateScale();
+
+        this.transform.position = GlobalMethods.Ease((Vector2)this.transform.position, TargetPosition, 0.1f);
     }
 
     #region Interface
-    public void AddCardTop(Card card)
+
+    public void DrawCardToHand()
     {
-        throw new NotImplementedException();
+        var deleteCard = PullFirstCard();
+        deleteCard.BeginFlip();
+        hand.AddCard(deleteCard);
+
+        PositionCards();
+        DebugNameCards();
     }
 
-    public void AddCardBottom(Card card)
+    public void DrawCardFromBottomToHand()
     {
-        throw new NotImplementedException();
-    }
+        var deleteCard = PullLastCard();
+        deleteCard.BeginFlip();
+        hand.AddCard(deleteCard);
 
-    public void AddCardRandom(Card card)
-    {
-        throw new NotImplementedException();
-    }
-
-
-    public Card DrawCard()
-    {
-
-        throw new NotImplementedException();
-    }
-
-    public Card DrawFromBottom()
-    {
-        throw new NotImplementedException();
+        PositionCards();
+        DebugNameCards();
     }
 
     public Stack<Card> ScryX(int numCards)
@@ -169,8 +169,8 @@ public class CardDeck : CardGroup
     {
         if (cards.Count > 0)
         {
-            float deckX = this.transform.position.x;
-            float deckY = this.transform.position.y;
+            float deckX = this.TargetPosition.x;
+            float deckY = this.TargetPosition.y;
 
             for (int i = 0; i < cards.Count; i++)
             {
@@ -206,12 +206,7 @@ public class CardDeck : CardGroup
         {
             if (cards.Count > 0)
             {
-                var deleteCard = PullFirstCard();
-                deleteCard.BeginFlip();
-                hand.AddCard(deleteCard);
-
-                PositionCards();
-                DebugNameCards();
+                DrawCardToHand();
             }
         }
 
@@ -219,7 +214,7 @@ public class CardDeck : CardGroup
         {
             if (cards.Count > 0)
             {
-                ShuffleExplode(70);
+                ShuffleExplode((int)(100 * this.transform.localScale.x));
             }
         }
 

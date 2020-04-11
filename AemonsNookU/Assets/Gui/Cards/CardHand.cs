@@ -57,18 +57,23 @@ public class CardHand : CardGroup
     // Start is called before the first frame update
     void Start()
     {
-        
+        TargetPosition = this.transform.position;
+        NormalPosition = this.transform.position;
+        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckHover();
+        CheckCardsHover();
         CheckClick();
         PositionCards();
+        UpdateScale();
+
+        this.transform.position = GlobalMethods.Ease((Vector2)this.transform.position, TargetPosition, 0.1f);
     }
 
-    public void CheckHover()
+    public void CheckCardsHover()
     {
         Card closest = ClosestCard;
         if (closest != null)
@@ -90,11 +95,11 @@ public class CardHand : CardGroup
         }
     }
 
+
     public void CheckClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log($"GetMouseButtonDown(0)");
             Card closest = ClosestCard;
             if (closest != null)
             {
@@ -113,8 +118,8 @@ public class CardHand : CardGroup
     {
         if (cards.Count > 0)
         {
-            float handX = this.transform.position.x;
-            float handY = this.transform.position.y;
+            float handX = this.TargetPosition.x;
+            float handY = this.TargetPosition.y;
 
             int numCards = cards.Count;
 

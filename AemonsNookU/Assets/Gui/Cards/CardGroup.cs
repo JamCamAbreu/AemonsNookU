@@ -16,9 +16,11 @@ public abstract class CardGroup : MonoBehaviour
     public CardDiscard discard;
 
     public List<Card> cards = new List<Card>();
-
     public abstract Card.CardState cardState { get; }
-
+    public Vector2 TargetPosition { get; set; }
+    public Vector2 NormalPosition { get; set; }
+    public Vector2 HidePosition { get; set; }
+    public Vector2 TargetScale { get; set; }
 
 
     public void AddCard(Card card, bool addToFront = false, bool reposition = false)
@@ -53,6 +55,11 @@ public abstract class CardGroup : MonoBehaviour
     }
 
     public virtual void PositionCards() { }
+
+    public virtual void UpdateScale()
+    {
+        this.transform.localScale = GlobalMethods.Ease((Vector2)this.transform.localScale, TargetScale, 0.1f);
+    }
 
     public virtual Card PullFirstCard()
     {
