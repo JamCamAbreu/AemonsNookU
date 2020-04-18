@@ -46,8 +46,8 @@ public static class BuildingInfo
         switch (t)
         {
             case Type.ARCHERY:
-                //      ++++
-                //      ++++
+                //      +++
+                //      +++
                 //        ^
                 relativeCoordinates.Add(Tuple.Create(2, -1));
                 break;
@@ -173,9 +173,6 @@ public static class BuildingInfo
 
                 relativeCoordinates.Add(Tuple.Create(2, 0));
                 relativeCoordinates.Add(Tuple.Create(2, 1));
-
-                relativeCoordinates.Add(Tuple.Create(3, 0));
-                relativeCoordinates.Add(Tuple.Create(3, 1));
                 break;
 
             case Type.BLACKSMITH:

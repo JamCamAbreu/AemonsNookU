@@ -21,6 +21,8 @@ public abstract class CardGroup : MonoBehaviour
     public Vector2 NormalPosition { get; set; }
     public Vector2 HidePosition { get; set; }
     public Vector2 TargetScale { get; set; }
+    public float HideTransformY;
+    public float HideTransformX;
 
 
     public void AddCard(Card card, bool addToFront = false, bool reposition = false)

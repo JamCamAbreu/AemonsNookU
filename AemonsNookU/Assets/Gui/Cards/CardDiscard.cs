@@ -27,7 +27,7 @@ public class CardDiscard : CardGroup
     {
         TargetPosition = this.transform.position;
         NormalPosition = this.transform.position;
-        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
+        HidePosition = new Vector2(this.NormalPosition.x + HideTransformX, this.NormalPosition.y + HideTransformY);
 
         UnityEngine.Random.InitState(System.DateTime.Now.Millisecond);
 

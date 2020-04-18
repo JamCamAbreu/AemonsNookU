@@ -16,6 +16,8 @@ public class CardHand : CardGroup
     public float radius { get; set; } // = 60;  // distance in pixels
     public int CenterAngle { get { return 90; } }
 
+
+    public Card ChosenCard { get; set; }
     public Card lastClosest { get; set; }
     public Card ClosestCard
     {
@@ -23,21 +25,29 @@ public class CardHand : CardGroup
         {
             if (cards.Count > 0)
             {
-                double closestDistance = MinDistance;
-                Card closest = null;
 
-                Vector2 mousePos = Input.mousePosition;
-                //Vector2 mousePos = Camera.main.ScreenToWorldPoint(mouse);
-                foreach (Card card in cards)
+                if (ChosenCard != null)
                 {
-                    float distanceToMouse = Vector2.Distance(mousePos, card.transform.position);
-                    if (distanceToMouse < closestDistance)
-                    {
-                        closest = card;
-                        closestDistance = distanceToMouse;
-                    }
+                    return ChosenCard;
                 }
-                return closest;
+                else
+                {
+                    double closestDistance = MinDistance;
+                    Card closest = null;
+
+                    Vector2 mousePos = Input.mousePosition;
+                    //Vector2 mousePos = Camera.main.ScreenToWorldPoint(mouse);
+                    foreach (Card card in cards)
+                    {
+                        float distanceToMouse = Vector2.Distance(mousePos, card.transform.position);
+                        if (distanceToMouse < closestDistance)
+                        {
+                            closest = card;
+                            closestDistance = distanceToMouse;
+                        }
+                    }
+                    return closest;
+                }
             }
             else
             {
@@ -59,7 +69,8 @@ public class CardHand : CardGroup
     {
         TargetPosition = this.transform.position;
         NormalPosition = this.transform.position;
-        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
+        HidePosition = new Vector2(this.NormalPosition.x + HideTransformX, this.NormalPosition.y + HideTransformY);
+        ChosenCard = null;
     }
 
     // Update is called once per frame
@@ -104,7 +115,12 @@ public class CardHand : CardGroup
             if (closest != null)
             {
                 this.cards.Remove(closest);
-                this.discard.AddCard(closest);
+                closest.transitionType = Card.TransitionType.UseCard;
+                closest.TransitionTimer = 20;
+                closest.TargetPos = new Vector2(closest.TargetPos.x, closest.TargetPos.y + 100f);
+                closest.TargetScale = new Vector2(4, 4);
+                closest.TargetRot = Quaternion.Euler(0, 0, 0);
+                ChosenCard = closest;
 
                 this.PositionCards();
                 this.DebugNameCards();

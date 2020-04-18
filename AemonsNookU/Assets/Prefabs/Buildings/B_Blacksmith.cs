@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 public class B_Blacksmith : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BLACKSMITH;
-        this.Name = "Blacksmith";
-        this.Description = "Hard working Blacksmith peeps craft tools and weapons to sell.";
-        this.Capacity = 8;
-    }
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.ARCHERY; } }
+    public override string Name { get { return "Blacksmith"; } }
+    public override string Description { get { return "Hard working Blacksmith peeps craft tools and weapons to sell."; } }
+    public override int Capacity { get { return 8; } }
 
 }

@@ -7,17 +7,15 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
 
-    public GameObject CardFront;
-    public GameObject CardBack;
-    public GameObject CardTitle;
-    public GameObject Logo;
-
-
     public enum TransitionType
     {
         None,
-        DeckExplode
+        DeckExplode,
+        UseCard
     }
+    public int TransitionTimer { get; set; }
+
+    public CardUI cardUI;
 
     public TransitionType transitionType { get; set; }
 
@@ -41,11 +39,13 @@ public class Card : MonoBehaviour
         Back
     }
 
+
     public Side FacingSide { get; set; }
 
     public Vector2 TargetPos { get; set; }
 
     public Quaternion TargetRot { get; set; }
+    public Vector2 TargetScale;
 
     public CardState state { get; set; }
     public CardDeck deck { get; set; }
@@ -65,8 +65,10 @@ public class Card : MonoBehaviour
         this.cachedScale = transform.localScale;
         if(TargetPos == null) { TargetPos = this.transform.position; }
         if (TargetRot == null) { TargetRot = this.transform.rotation; }
+        this.TargetScale = new Vector2(1, 1);
         this.flipState = FlipState.None;
         this.transitionType = TransitionType.None;
+        this.TransitionTimer = 0;
     }
 
 
@@ -77,28 +79,48 @@ public class Card : MonoBehaviour
 
         UpdatePosition();
         UpdateRotation();
+        UpdateScale();
+
+        UseCardTransition();
     }
 
 
     public void SetCardSide(Side side)
     {
+        this.cardUI.SetCardSide(side);
+
         if (side == Side.Back)
         {
-            CardFront.SetActive(false);
-            CardBack.SetActive(true);
-            CardTitle.SetActive(false);
-            Logo.SetActive(false);
             this.FacingSide = Side.Back;
         }
         else if (side == Side.Front)
         {
-            CardFront.SetActive(true);
-            CardBack.SetActive(false);
-            CardTitle.SetActive(true);
-            Logo.SetActive(true);
             this.FacingSide = Side.Front;
         }
     }
+
+
+    public void UseCardTransition()
+    {
+        if (this.transitionType == TransitionType.UseCard)
+        {
+            if (this.TransitionTimer > 0) { this.TransitionTimer--; }
+            else
+            {
+                this.transitionType = TransitionType.None;
+                this.discard.AddCard(this);
+                this.TargetScale = new Vector2(1, 1);
+                this.hand.ChosenCard = null;
+
+                PerformAction();
+            }
+        }
+    }
+
+    public virtual void PerformAction()
+    {
+    }
+
 
     public void BeginFlip()
     {
@@ -131,6 +153,12 @@ public class Card : MonoBehaviour
     }
 
 
+    protected void UpdateScale()
+    {
+        this.transform.localScale = GlobalMethods.Ease((Vector2)this.transform.localScale, TargetScale, 0.1f);
+    }
+
+
 
     protected void UpdateRotation()
     {
@@ -153,13 +181,18 @@ public class Card : MonoBehaviour
 
     public void MouseEnterClosestCard()
     {
-        transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+        this.cachedScale = this.TargetScale;
+        this.TargetScale = new Vector3(2.0f, 2.0f, 2.0f);
         transform.SetAsLastSibling();
     }
 
     public void MouseExitClosestCard()
     {
-        transform.localScale = cachedScale;
+        if (this.transitionType == TransitionType.None)
+        {
+            this.TargetScale = cachedScale;
+        }
+
         transform.SetSiblingIndex(cardNum);
     }
 

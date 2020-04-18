@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 public class B_Archery : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.ARCHERY;
-        this.Name = "Archery Range";
-        this.Description = "Allow peeps to train their archery skills.";
-        this.Capacity = 4;
-    }
 
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.ARCHERY; } }
+    public override string Name { get { return "Archery"; } }
+    public override string Description { get { return "Allow peeps to train their archery skills."; } }
+    public override int Capacity { get { return 4; } }
 
 }

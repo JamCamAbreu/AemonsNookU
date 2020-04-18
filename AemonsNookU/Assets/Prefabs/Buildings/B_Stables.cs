@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public class B_Stables : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.STABLES;
-        this.Name = "Stables";
-        this.Description = "Mounted peeps can leave their horses here for care. Wealthy peeps may purchase horses here.";
-        this.Capacity = 8;
-    }
-
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.STABLES; } }
+    public override string Name { get { return "Stables"; } }
+    public override string Description { get { return "Mounted peeps can leave their horses here for care. Wealthy peeps may purchase horses here."; } }
+    public override int Capacity { get { return 4; } }
 }

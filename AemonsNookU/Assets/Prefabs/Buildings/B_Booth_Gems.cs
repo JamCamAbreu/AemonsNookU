@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 public class B_Booth_Gems : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BOOTH_GEMS;
-        this.Name = "Gems Booth";
-        this.Description = "Glimmering gems, jewels, valuables attract wealthy peeps.";
-        this.Capacity = 4;
-    }
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.BOOTH_GEMS; } }
+    public override string Name { get { return "Gems"; } }
+    public override string Description { get { return "Glimmering gems, jewels, valuables attract wealthy peeps."; } }
+    public override int Capacity { get { return 1; } }
 
 }

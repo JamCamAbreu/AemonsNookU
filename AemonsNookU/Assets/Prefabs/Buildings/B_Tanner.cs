@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public class B_Tanner : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.TANNER;
-        this.Name = "Tanner";
-        this.Description = "Tough hide is worked into leather for armor or tools.";
-        this.Capacity = 4;
-    }
-
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.TANNER; } }
+    public override string Name { get { return "Tanner"; } }
+    public override string Description { get { return "Tough hide is worked into leather for armor or tools."; } }
+    public override int Capacity { get { return 2; } }
 }

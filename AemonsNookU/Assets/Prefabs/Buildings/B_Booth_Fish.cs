@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public class B_Booth_Fish : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BOOTH_FISH;
-        this.Name = "Fish Booth";
-        this.Description = "Fresh fish caught just this morning!";
-        this.Capacity = 4;
-    }
-
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.BOOTH_FISH; } }
+    public override string Name { get { return "Fish"; } }
+    public override string Description { get { return "Fresh fish caught just this morning!"; } }
+    public override int Capacity { get { return 2; } }
 }

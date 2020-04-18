@@ -96,15 +96,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesTall: 1
   tilesWide: 1
-  Type: 6
-  Name: 
-  Description: 
   Rotation: 0
+  Icon: {fileID: 21300000, guid: 6440a500fbd6a474ba288428dd9d66d2, type: 3}
   normal: {fileID: 21300000, guid: 8b9a2302ee62f274e99f61dd3e0f3386, type: 3}
   clockOne: {fileID: 0}
   clockTwo: {fileID: 0}
   clockThree: {fileID: 0}
   originX: 0
   originY: 0
-  Capacity: 0
   Occupants: []

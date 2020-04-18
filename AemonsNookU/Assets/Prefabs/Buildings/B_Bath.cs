@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 public class B_Bath : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BATH;
-        this.Name = "Public Bath";
-        this.Description = "Peeps can finally scrub that dirt off!";
-        this.Capacity = 8;
-    }
 
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.BATH; } }
+    public override string Name { get { return "Public Bath"; } }
+    public override string Description { get { return "Peeps can finally scrub off that dirt and grime!"; } }
+    public override int Capacity { get { return 8; } }
 
 }

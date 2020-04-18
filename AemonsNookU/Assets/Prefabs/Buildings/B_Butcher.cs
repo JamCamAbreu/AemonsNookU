@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public class B_Butcher : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BUTCHER;
-        this.Name = "Butcher";
-        this.Description = "Fresh cuts, no hearty meal goes without a sale to the butcher!";
-        this.Capacity = 4;
-    }
-
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.BUTCHER; } }
+    public override string Name { get { return "Butcher"; } }
+    public override string Description { get { return "Fresh cuts, no hearty meal goes without a sale to the butcher!"; } }
+    public override int Capacity { get { return 4; } }
 }

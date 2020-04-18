@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 public class B_Booth_Seeds : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.BOOTH_SEEDS;
-        this.Name = "Seeds Booth";
-        this.Description = "Sellings seeds allows peeps to grow their own gardens.";
-        this.Capacity = 4;
-    }
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.BOOTH_SEEDS; } }
+    public override string Name { get { return "Seeds"; } }
+    public override string Description { get { return "Sellings seeds allows peeps to grow their own gardens."; } }
+    public override int Capacity { get { return 4; } }
 
 }

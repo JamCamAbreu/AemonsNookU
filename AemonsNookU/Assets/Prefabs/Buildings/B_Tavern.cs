@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 public class B_Tavern : Building
 {
-    public void Awake()
-    {
-        this.Type = BuildingInfo.Type.TAVERN;
-        this.Name = "Tavern";
-        this.Description = "Drinks for everyone! Careful though, tipsy peeps might start a fight!";
-        this.Capacity = 9;
-    }
-
-
+    public override BuildingInfo.Type Type { get { return BuildingInfo.Type.TAVERN; } }
+    public override string Name { get { return "Tavern"; } }
+    public override string Description { get { return "Drinks for everyone! Careful though, tipsy peeps might start a fight!"; } }
+    public override int Capacity { get { return 8; } }
 }

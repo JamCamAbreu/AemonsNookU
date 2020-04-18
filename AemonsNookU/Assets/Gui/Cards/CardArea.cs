@@ -65,7 +65,7 @@ public class CardArea : MonoBehaviour
 
             if (lastFrameWasShow)
             {
-                //this.deck.PositionCards();
+                this.deck.PositionCards();
             }
             lastFrameWasShow = false;
         }

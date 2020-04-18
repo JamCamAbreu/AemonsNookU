@@ -3,19 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour
+public abstract class Building : MonoBehaviour
 {
     public float tilesTall;
     public float tilesWide;
     public const float offset = 0.0f;
 
-    public BuildingInfo.Type Type;
-    public string Name;
-    public string Description;
+    //public virtual BuildingInfo.Type Type { get; }
+    //public virtual string Name { get; }
+    //public virtual string Description { get; }
+
+    public virtual BuildingInfo.Type Type { get { return BuildingInfo.Type.ARCHERY; } set { Type = value; } }
+    public virtual string Name { get { return "Error, not initialized properly!"; } set { } }
+    public virtual string Description { get { return "Error, not initialized properly!"; } set { } }
+    public virtual int Capacity { get { return 0; } set { Capacity = value; } }
+
+
     public BuildingSelection.Rotation Rotation;
 
     public List<CodeTile> TilesUnderneath = new List<CodeTile>();
     public List<CodeTile> Entrances = new List<CodeTile>();
+
+    public Sprite Icon;
 
     public Sprite normal;
     public Sprite clockOne;
@@ -25,7 +34,6 @@ public class Building : MonoBehaviour
     public int originX;
     public int originY;
 
-    public int Capacity;
     public List<Peep> Occupants = new List<Peep>();
 
     public SpriteRenderer MySpriteRend

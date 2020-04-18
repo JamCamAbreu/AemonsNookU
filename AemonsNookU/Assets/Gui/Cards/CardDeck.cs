@@ -23,7 +23,7 @@ public class CardDeck : CardGroup
         DelayShuffleRadius = 0;
         TargetPosition = this.transform.position;
         NormalPosition = this.transform.position;
-        HidePosition = new Vector2(this.NormalPosition.x, this.NormalPosition.y - 40f);
+        HidePosition = new Vector2(this.NormalPosition.x + HideTransformX, this.NormalPosition.y + HideTransformY);
     }
 
     // Update is called once per frame
@@ -182,25 +182,6 @@ public class CardDeck : CardGroup
 
     public void DebugKeys()
     {
-
-        if (Input.GetKeyDown("1"))
-        {
-            Vector2 spawnPos = new Vector2(this.transform.position.x + 10, this.transform.position.y - 50);
-            Card debugCard = Instantiate(cardAsset, spawnPos, this.transform.rotation, this.transform);
-            debugCard.transform.rotation = Quaternion.Euler(0, 0, -40);
-            debugCard.TargetRot = Quaternion.Euler(0, 0, 0);
-            debugCard.deck = this;
-            debugCard.hand = this.hand;
-            debugCard.discard = this.discard;
-            debugCard.state = Card.CardState.deck;
-            debugCard.SetCardSide(Card.Side.Back);
-
-            notificationCanvas.AddNotification(Notification.Type.userAction, $"Adding card to hand.");
-            AddCard(debugCard, true);
-
-            PositionCards();
-            DebugNameCards();
-        }
 
         if (Input.GetKeyDown("2"))
         {
