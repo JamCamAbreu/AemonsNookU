@@ -21,7 +21,7 @@ public class World : MonoBehaviour
     {
         InitGameFramerate();
 
-        Level test = new Level02();  // Todo, later have a menu too choose a level
+        Level test = new Level03();  // Todo, later have a menu too choose a level
         LoadLevel(test);
 
         treeList = new GameObject("Trees");
@@ -276,6 +276,14 @@ public class World : MonoBehaviour
                 SpawnTiles.Add(curTile);
                 break;
 
+            case '5':
+                curTile.UpdateTileType(CodeTile.Type.road);
+                curTile.isPath = true;
+                curTile.isMapEdge = true;
+                curTile.mapEdgeId = 5;
+                SpawnTiles.Add(curTile);
+                break;
+
             default:
                 break;
         }
@@ -456,7 +464,7 @@ public class World : MonoBehaviour
                 break;
 
             case CodeTile.Type.building:
-                botMap.SetTile(new Vector3Int(xPos, yPos, 0), road);
+                botMap.SetTile(new Vector3Int(xPos, yPos, 0), grass);
                 break;
 
             default:

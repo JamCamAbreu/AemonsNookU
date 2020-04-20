@@ -1,0 +1,4644 @@
+COLORTOOL v1.0
+SECTION PALETTE 319
+#807b7a #8b827f #9b8c87 #ac9890 #bda499 #b49055 #b19e2e #b58127 #b76121 #b9451d #adb834 #967847 #7c654b #464762 #3d3d55 #323346 #1b2447 #2d1a1f #0e0c0c #1e1215 #111323 #1a1922 #161c36 #272736 #343231 #30331d #33291e #3a2128 #462730 #512d38 #4a3b22 #4f402f #4b502c #524f4e #67543e #745d36 #61683a #696c4d #6b6665 #747364
+SECTION DOCUMENT 76765
+{
+ "id": "15873538222223834889",
+ "filepath": "C:/GithubRepos/AemonsNookU/Resources/BuildingColors.clrpal",
+ "settings": {
+  "snap_to_grid": true,
+  "grid_size": {
+   "_t": "Vector2",
+   "value": [
+    16,
+    16
+   ]
+  },
+  "draw_grid": false,
+  "zoom": -0.965139,
+  "scroll": {
+   "_t": "Vector2",
+   "value": [
+    -284.541718,
+    -247.6875
+   ]
+  },
+  "old_path_root": "C:/GithubRepos/AemonsNookU/Resources"
+ },
+ "objects": [
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0001",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -242,
+     -21
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0002",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -206,
+     -57
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0003",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -240,
+     4
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0004",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -212,
+     -34
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0005",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -47,
+     139
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -1.78928,
+     4.430964
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0006",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -44,
+     161
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0007",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -43,
+     181
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0008",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -44,
+     204
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0009",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     261,
+     366
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0.3013,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     11.876196,
+     -2.765471
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000A",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     264,
+     341
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000B",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     273,
+     318
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000C",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     274,
+     293
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000D",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     100,
+     419
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000E",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     111,
+     425
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img000F",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     108,
+     402
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0010",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     109,
+     376
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0011",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     66,
+     180
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -0.483656,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     3.891665,
+     9.300003
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0012",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     96,
+     159
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0013",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     64,
+     132
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0014",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     90,
+     105
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 2.912129,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -2.285711,
+     -11.285717
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0015",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     259,
+     126
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     142
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0016",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     265,
+     74
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0017",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     264,
+     147
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0.25,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -3.489283,
+     -9.300003
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0018",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     261,
+     102
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0019",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -271,
+     220
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 1.285437,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     8.700005,
+     8.466671
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001A",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -239,
+     180
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001B",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -269,
+     241
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001C",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -238,
+     201
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001D",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -245,
+     417
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001E",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -248,
+     419
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img001F",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -250,
+     385
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0020",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -249,
+     358
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0021",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -107,
+     397
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables1.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 3.633655,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0.545235,
+     17.35833
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0022",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -81,
+     360
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables2.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0023",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -106,
+     370
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     200,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables3.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0024",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -81,
+     336
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     205
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables4.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0025",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -240,
+     158
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tanner/Tanner01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 1.641781,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -5,
+     -7.1
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0026",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -237,
+     137
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tanner/Tanner02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0027",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -237,
+     82
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tanner/Tanner03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 5.9,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1.39,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0028",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -239,
+     190
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tanner/Tanner04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 1.249985,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -0.099997,
+     0.933331
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0029",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -79,
+     186
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern01.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6.2,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1.721091,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     -13.5,
+     6
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img002A",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -81,
+     137
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern02.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img002B",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -80,
+     162
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern03.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img002C",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -78,
+     111
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     136,
+     141
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern04.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": 0,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr002D",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.02708,
+     0.021243,
+     0.201603
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -343,
+     -231
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr002E",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0,
+     0.000715,
+     0.003829
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -423,
+     -231
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp002F",
+   "from": "Clr002E",
+   "to": "Clr002D",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0030",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.199426,
+     0.09612,
+     0.127475
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -375,
+     -183
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0032",
+   "from": "Clr0030",
+   "to": "Clr002E",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0033",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.645271,
+     0.05205,
+     0.019497
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -407,
+     -295
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0034",
+   "from": "Clr002E",
+   "to": "Clr0033",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0036",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.086588,
+     0.364611,
+     0.304145
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -471,
+     -295
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0037",
+   "from": "Clr002E",
+   "to": "Clr0036",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0038",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.962745,
+     0.0563,
+     0.039627
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -519,
+     -231
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0039",
+   "from": "Clr002E",
+   "to": "Clr0038",
+   "steps": 4,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr003C",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.075938,
+     0.131196,
+     0.141004
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -487,
+     -167
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp003D",
+   "from": "Clr002E",
+   "to": "Clr003C",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr003E",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.661839,
+     0.060893,
+     0.066904
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -439,
+     -135
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp003F",
+   "from": "Clr002E",
+   "to": "Clr003E",
+   "steps": 4,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0040",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.046139,
+     0.190335,
+     0.396696
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -343,
+     -295
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0041",
+   "from": "Clr002D",
+   "to": "Clr0040",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0042",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.016645,
+     0.472863,
+     0.146592
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -519,
+     -359
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0043",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.189677,
+     0.44498,
+     0.434132
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -455,
+     -359
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0044",
+   "from": "Clr0042",
+   "to": "Clr0043",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0047",
+   "from": "Clr0030",
+   "to": "Clr002D",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ ]
+}
