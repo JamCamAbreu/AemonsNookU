@@ -47,12 +47,12 @@ TTTTT-----------D------------DD-------------------
 ------------DD--------------------D--------TTTTTTT
 ----------DDD---------TTTTTTT-----D------TTTTTTTTT
 -------DDD----------TTTTTTTTT-----D---TTTTTTTTTTTT
------DD-----------TTTT-----------DD----TTTTTTTTTTT
+W----DD-----------TTTT-----------DD----TTTTTTTTTTT
 5DDDD-------------TTTTTTT------DD-------TTTT------
-----------------TTTTTTT-------DD-------TTTT-------
--TTTT---------TTTTTTT---------D--------TTT--------
+W---------------TTTTTTT-------DD-------TTTT-------
+-TTTT---------TTTTTTT---------D--------TTT-------W
 TTTTTWWWWWWWTTTTTTTTTT--------DD--------------DDD4
-TTTTTTTTWWWWTWWTTTTTTTTTT------DDD--------DDDDD---
+TTTTTTTTWWWWTWWTTTTTTTTTT------DDD--------DDDDD--W
 TTTTTTTWWWWWWWWTTTTTTTTTTT--------DDDDDDDDD-------
 TTTTTTTTWWTTTTTTTTTTTTTTTTTT----------------------";
         }

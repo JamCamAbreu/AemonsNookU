@@ -98,10 +98,10 @@ MonoBehaviour:
   tilesWide: 3
   Rotation: 0
   Icon: {fileID: 21300000, guid: da026bacd17ec314a945ffcc3b36e2a7, type: 3}
-  normal: {fileID: 21300000, guid: c0bf07bccff5d8949809d745fbb127b8, type: 3}
-  clockOne: {fileID: 21300000, guid: da55a6d3f4719a048b227cfc97ddaa31, type: 3}
-  clockTwo: {fileID: 21300000, guid: 59644c971cff83343a03ffcb8e9df4ad, type: 3}
-  clockThree: {fileID: 21300000, guid: db25a7a8c5870f942bfaf2b12cd88524, type: 3}
+  normal: {fileID: 21300000, guid: 90579363c2d23d04dab2e1b214001fca, type: 3}
+  clockOne: {fileID: 21300000, guid: 08decada058cb274eb7a9ac95cd8e92c, type: 3}
+  clockTwo: {fileID: 21300000, guid: a099d93f2b1b984409f2105f52f682a0, type: 3}
+  clockThree: {fileID: 21300000, guid: 41812bd287703c0408d47a6b6f032b9b, type: 3}
   originX: 0
   originY: 0
   Occupants: []

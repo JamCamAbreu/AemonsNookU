@@ -45,11 +45,18 @@ public static class TaskInfo
                 returnQueue.Push(cur);
                 CodeTile to = cur;
                 CodeTile from = visitedTiles[to];
-                while (from != startTile)
+                while (from != startTile && from != null)
                 {
                     returnQueue.Push(from);
                     to = from;
-                    from = visitedTiles[to];
+                    if (visitedTiles.ContainsKey(to))
+                    {
+                        from = visitedTiles[to];
+                    }
+                    else
+                    {
+                    
+                    }
                 }
 
                 return returnQueue;

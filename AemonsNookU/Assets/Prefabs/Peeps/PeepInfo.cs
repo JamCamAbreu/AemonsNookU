@@ -40,7 +40,7 @@ public static class PeepInfo
         p.Fame = GenerateFame(t);
         p.FirstName = GenerateFirstName(p.Sex);
         p.SirName = GenerateSirname(p.Fame);
-        p.FatiguePoints = GenerateFatigue(t, p.Sex);
+        p.Stamina = GenerateFatigue(t, p.Sex);
         p.Age = GenerateAge(t);
     }
 

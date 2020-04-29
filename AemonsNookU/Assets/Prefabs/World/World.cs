@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor;
+using UnityEngine.Assertions;
+using System.Linq;
 
 public class World : MonoBehaviour
 {
@@ -21,7 +23,7 @@ public class World : MonoBehaviour
     {
         InitGameFramerate();
 
-        Level test = new Level03();  // Todo, later have a menu too choose a level
+        Level test = new Level02();  // Todo, later have a menu too choose a level
         LoadLevel(test);
 
         treeList = new GameObject("Trees");
@@ -105,6 +107,10 @@ public class World : MonoBehaviour
 
     public PeepGenerator peepGenerator;
     public NotificationCanvas notificationCanvas;
+
+    public DecorationGenerator decorationGenerator;
+
+    private List<Building> buildings = new List<Building>();
     #endregion
 
 
@@ -113,8 +119,21 @@ public class World : MonoBehaviour
 
     // --------------- NEIGHBOR -----------------
     #region NEIGHBORS
-    public void SetNeighbors()
+
+    private void SetTileNeighbors()
     {
+        CodeTile curTile;
+        for (int h = 0; h < WorldHeight; h++)
+        {
+            for (int w = 0; w < WorldWidth; w++)
+            {
+                curTile = WorldTiles[h][w];
+                if (h > 0) { curTile.TileBelow = WorldTiles[h - 1][w]; }
+                if (h < WorldHeight - 1) { curTile.TileAbove = WorldTiles[h + 1][w]; }
+                if (w > 0) { curTile.TileLeft = WorldTiles[h][w - 1]; }
+                if (w < WorldWidth - 1) { curTile.TileRight = WorldTiles[h][w + 1]; }
+            }
+        }
     }
     #endregion
 
@@ -162,6 +181,44 @@ public class World : MonoBehaviour
 
     // --------------- BUILDINGS -----------------
     #region BUILDINGS
+    public List<Building> RetrieveBuildings()
+    {
+        return this.buildings;
+    }
+
+    public void AddBuilding(Building b)
+    {
+        this.buildings.Add(b);
+    }
+
+    public void RemoveBuilding(Building b)
+    {
+        this.buildings.Remove(b);
+    }
+
+    public List<CodeTile> RetrieveBuildingEntranceTilesType(BuildingInfo.Type type)
+    {
+        List<CodeTile> returnList = new List<CodeTile>();
+        var entrancesGroup = (buildings.Where(b => b.Type == type).Select(b => b.Entrances));
+        foreach (var group in entrancesGroup)
+        {
+            returnList.AddRange(group);
+        }
+        return returnList;
+    }
+
+    public List<CodeTile> RetrieveBuildingEntranceTiles()
+    {
+        List<CodeTile> returnList = new List<CodeTile>();
+        var entrancesGroup = (buildings.Select(b => b.Entrances));
+        foreach (var group in entrancesGroup)
+        {
+            returnList.AddRange(group);
+        }
+        return returnList;
+    }
+
+
     #endregion
 
 
@@ -171,14 +228,18 @@ public class World : MonoBehaviour
     #region ROADS
     public CodeTile GetRandomRoadTile()
     {
-        return RoadTiles[Random.Range(0, RoadTiles.Count - 1)];
+        return RoadTiles[Random.Range(0, RoadTiles.Count)];
     }
 
     public CodeTile GetRandomExitTile()
     {
-        return SpawnTiles[Random.Range(0, SpawnTiles.Count - 1)];
+        return SpawnTiles[Random.Range(0, SpawnTiles.Count)];
     }
 
+    public List<CodeTile> RetrieveAllRoadTiles()
+    {
+        return RoadTiles;
+    }
     #endregion
 
 
@@ -201,7 +262,8 @@ public class World : MonoBehaviour
         string levelCode = lev.GetLevelCode();
         LoadTileTypesFromLevel(levelCode);
 
-
+        // Should have at least two exits:
+        Assert.IsTrue(this.SpawnTiles.Count > 1);
     }
 
     public void LoadTileTypesFromLevel(string input)
@@ -250,6 +312,7 @@ public class World : MonoBehaviour
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 1;
                 SpawnTiles.Add(curTile);
+                RoadTiles.Add(curTile);
                 break;
 
             case '2':
@@ -258,6 +321,7 @@ public class World : MonoBehaviour
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 2;
                 SpawnTiles.Add(curTile);
+                RoadTiles.Add(curTile);
                 break;
 
             case '3':
@@ -266,6 +330,7 @@ public class World : MonoBehaviour
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 3;
                 SpawnTiles.Add(curTile);
+                RoadTiles.Add(curTile);
                 break;
 
             case '4':
@@ -274,6 +339,7 @@ public class World : MonoBehaviour
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 4;
                 SpawnTiles.Add(curTile);
+                RoadTiles.Add(curTile);
                 break;
 
             case '5':
@@ -282,6 +348,7 @@ public class World : MonoBehaviour
                 curTile.isMapEdge = true;
                 curTile.mapEdgeId = 5;
                 SpawnTiles.Add(curTile);
+                RoadTiles.Add(curTile);
                 break;
 
             default:
@@ -376,21 +443,6 @@ public class World : MonoBehaviour
         codeTilesReady = true;
     }
 
-    private void SetTileNeighbors()
-    {
-        CodeTile curTile;
-        for (int h = 0; h < WorldHeight; h++)
-        {
-            for (int w = 0; w < WorldWidth; w++)
-            {
-                curTile = WorldTiles[h][w];
-                if (h > 0) { curTile.TileAbove = WorldTiles[h - 1][w]; }
-                if (h < WorldHeight - 1) { curTile.TileBelow = WorldTiles[h + 1][w]; }
-                if (w > 0) { curTile.TileLeft = WorldTiles[h][w - 1]; }
-                if (w < WorldWidth - 1) { curTile.TileRight = WorldTiles[h][w + 1]; }
-            }
-        }
-    }
 
 
 

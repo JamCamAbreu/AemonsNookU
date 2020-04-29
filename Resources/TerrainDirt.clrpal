@@ -1,0 +1,309 @@
+COLORTOOL v1.0
+SECTION PALETTE 31
+#170f00 #29200e #3b311c #4c3f28
+SECTION DOCUMENT 5081
+{
+ "id": "15878211412562647615",
+ "filepath": "C:/GithubRepos/AemonsNookU/Resources/TerrainDirt.clrpal",
+ "settings": {
+  "snap_to_grid": true,
+  "grid_size": {
+   "_t": "Vector2",
+   "value": [
+    16,
+    16
+   ]
+  },
+  "draw_grid": false,
+  "zoom": 0.726279,
+  "scroll": {
+   "_t": "Vector2",
+   "value": [
+    -125.428619,
+    131.861893
+   ]
+  },
+  "old_path_root": "C:/GithubRepos/AemonsNookU/Resources"
+ },
+ "objects": [
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0001",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     392,
+     50
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     438,
+     403
+    ]
+   },
+   "anchor": 2,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Terrain/Grass/Grass-one.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Terrain/Dirt/Dirt-IntersectionRecolor.png",
+   "factors": {
+    "lum": 10,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1.32,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -2.36314,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     4.371424,
+     3.577383
+    ]
+   }
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0003",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -64,
+     222
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     447,
+     309
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery01Recolor.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1.249999,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     4.783337,
+     8
+    ]
+   }
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0005",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.096092,
+     0.008451,
+     0.005281
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -343,
+     -119
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0006",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.096028,
+     0.050704,
+     0.052687
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -343,
+     -71
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0007",
+   "from": "Clr0006",
+   "to": "Clr0005",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ ]
+}

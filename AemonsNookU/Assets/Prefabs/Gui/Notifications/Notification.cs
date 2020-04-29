@@ -13,7 +13,8 @@ public class Notification : MonoBehaviour
         peepArrivalRoyal,
         peepDeparture,
         barfight,
-        incomingWave
+        incomingWave,
+        error
     }
 
     public int life;
@@ -66,6 +67,10 @@ public class Notification : MonoBehaviour
 
             case Type.incomingWave:
                 this.frontHighlight.color = Color.red;
+                break;
+
+            case Type.error:
+                this.frontHighlight.color = new Color(1, 165f/255f, 0);
                 break;
 
             default:

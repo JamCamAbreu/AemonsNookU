@@ -20,6 +20,16 @@ public class Peep : MonoBehaviour
         set { this.transform.position = value; }
     }
 
+    // Special multiplier defined by child peep 
+    public virtual float RetrieveBuildingDurationMultiplier(BuildingInfo.Type type)
+    {
+        switch (type)
+        {
+            default:
+                return 1;
+        }
+    }
+
 
     public CodeTile OnTopOfTile { get; set; }
 
@@ -34,14 +44,14 @@ public class Peep : MonoBehaviour
     public string SirName;
     public int Age;
     public int Fame;
-    public int FatiguePoints; // tasks cost fatigue points, points before tired and wants to leave
+    public int Stamina; // tasks cost stamina points, points before tired and wants to leave
 
     private Animator feetAnimator;
 
     // Resources (in pounds):
     public Dictionary<string, Item> Inventory { get; set; }
 
-    private void Awake()
+    public virtual void Awake()
     {
         MyTasks = new Stack<Task>();
         Inventory = new Dictionary<string, Item>();
@@ -50,16 +60,30 @@ public class Peep : MonoBehaviour
         PeepInfo.UpdatePeepType(this, (PeepInfo.Type)randomType);
 
         feetAnimator = GetComponentInChildren<Animator>();
-        //feetAnimator.Play("Feet1");
+    }
+
+    public bool DepleteStamina (int amount)
+    {
+        Stamina -= amount;
+        return (Stamina > 0);
+    }
+
+    public void Hide()
+    {
+        this.rend.enabled = false;
+    }
+    public void Unhide()
+    {
+        this.rend.enabled = true;
     }
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (CurrentTask == null)
         {
@@ -69,7 +93,7 @@ public class Peep : MonoBehaviour
             }
             else
             {
-                Debug.Log($"{this.FirstName} {this.SirName} finished all tasks. Generating a new task.");
+                //Debug.Log($"{this.FirstName} {this.SirName} finished all tasks. Generating a new task.");
                 MyPeepGenerator.GenerateNextTask(this);
 
                 Assert.IsTrue(this.MyTasks.Count > 0);
@@ -94,7 +118,7 @@ public class Peep : MonoBehaviour
         switch (dir)
         {
             case Direction.Up:
-                transform.rotation = Quaternion.Euler(0, 0, 270f);
+                transform.rotation = Quaternion.Euler(0, 0, 90f);
                 break;
 
             case Direction.Right:
@@ -102,7 +126,7 @@ public class Peep : MonoBehaviour
                 break;
 
             case Direction.Down:
-                transform.rotation = Quaternion.Euler(0, 0, 90f);
+                transform.rotation = Quaternion.Euler(0, 0, 270f);
                 break;
 
             case Direction.Left:

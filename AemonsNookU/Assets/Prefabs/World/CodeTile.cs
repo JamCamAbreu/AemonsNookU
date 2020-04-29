@@ -38,6 +38,8 @@ public class CodeTile
     public CodeTile TileLeft { get; set; }
     public List<Clickable> Resources = new List<Clickable>();
 
+    public Building ParentBuilding { get; set; }
+
     private Type _type { get; set; }
     public Type TileType { get { return _type; } set { _type = value; } }
 
@@ -47,6 +49,8 @@ public class CodeTile
         isPath = false;
         isMapEdge = false;
         mapEdgeId = -1;
+
+        ParentBuilding = null;
     }
 
     public void UpdateTileType(Type t)

@@ -111,30 +111,81 @@ public class BuildingSelection : MonoBehaviour
         createdBuilding.Rotation = myRotation;
         createdBuilding.UpdateRotationSprite();
 
+        this.world.AddBuilding(createdBuilding);
+
         foreach (BuildingSelectionSquare square in mySquares)
         {
+            CodeTile curTile = square.TileUnderneath;
+
+            // Both:
+            curTile.ParentBuilding = createdBuilding;
+
+
+            // Buildings:
             if (square.myType == BuildingSelectionSquare.Type.building)
             {
-                createdBuilding.TilesUnderneath.Add(square.TileUnderneath);
-                square.TileUnderneath.UpdateTileType(CodeTile.Type.building);
+                curTile.UpdateTileType(CodeTile.Type.building);
+                createdBuilding.TilesUnderneath.Add(curTile);
             }
+
+            // Entrances:
             else
             {
-                createdBuilding.Entrances.Add(square.TileUnderneath);
-                // Add signpost to path?
+                createdBuilding.Entrances.Add(curTile);
+
+                if (createdBuilding.sign == null)
+                {
+                    SignPost sign = CreateSignPost(square.TileUnderneath.posX, square.TileUnderneath.posY, myRotation);
+                    createdBuilding.sign = sign;
+                    //sign.transform.SetParent(createdBuilding.transform);
+                }
             }
         }
         this.world.TileMapUpdate();
 
         // Modify prefab:
-        BuildingSelectionSquare topLeft = GetBottomLeftSquare();
-        createdBuilding.originX = this.originX + topLeft.relativeX;
-        createdBuilding.originY = this.originY + topLeft.relativeY;
+        BuildingSelectionSquare bottomLeft = GetBottomLeftSquare();
+        createdBuilding.originX = this.originX + bottomLeft.relativeX;
+        createdBuilding.originY = this.originY + bottomLeft.relativeY;
 
         // Play sound effect
 
         // Notification:
         world.notificationCanvas.AddNotification(Notification.Type.userAction, $"Successfully constructed {createdBuilding.Name}.");
+    }
+
+    public SignPost CreateSignPost(int tileX, int tileY, Rotation rot)
+    {
+        SignPost prefab = this.world.decorationGenerator.signPostPrefab;
+        SignPost sign = Instantiate(prefab);
+        float adjustAmount = 0.25f;
+        float baseX = tileX + 0.5f;
+        float baseY = tileY + 0.5f;
+        switch (rot)
+        {
+            case Rotation.none:
+                sign.SetFacingDirection(SignPost.Facing.up);
+                sign.SetPosition(new Vector2(baseX, baseY + adjustAmount));
+                break;
+            case Rotation.oneClock:
+                sign.SetFacingDirection(SignPost.Facing.left);
+                sign.SetPosition(new Vector2(baseX - adjustAmount, baseY));
+                break;
+            case Rotation.twoClock:
+                sign.SetFacingDirection(SignPost.Facing.down);
+                sign.SetPosition(new Vector2(baseX, baseY - adjustAmount));
+                break;
+            case Rotation.threeClock:
+                sign.SetFacingDirection(SignPost.Facing.right);
+                sign.SetPosition(new Vector2(baseX + adjustAmount, baseY));
+                break;
+            default:
+                sign.SetFacingDirection(SignPost.Facing.up);
+                sign.SetPosition(new Vector2(baseX, baseY));
+                break;
+        }
+
+        return sign;
     }
 
     public void DestroyMe()

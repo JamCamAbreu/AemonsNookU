@@ -23,8 +23,7 @@ public class TaskWalk : Task
         this.AllRoads = allRoads;
 
         this.MyPath = TaskInfo.GenerateWalkQueue(this.StartTile, this.TargetTile, this.AllRoads);
-        Debug.Log($"Generated path with {this.MyPath.Count} steps between tile {StartTile.posX},{StartTile.posY} and target {TargetTile.posX},{TargetTile.posY}");
-        Assert.IsTrue(this.MyPath.Count > 0);
+        //Debug.Log($"Generated path with {this.MyPath.Count} steps between tile {StartTile.posX},{StartTile.posY} and target {TargetTile.posX},{TargetTile.posY}");
 
         this.curStep = this.StartTile;
         this.nextStep = this.GetNextStep();
@@ -53,8 +52,8 @@ public class TaskWalk : Task
             // Check fatigue and cancel if fatigued:
             if (!IgnoresFatigue)
             {
-                this.MyPeep.FatiguePoints -= 1; // walking causes 1 fatigue per step
-                if (MyPeep.FatiguePoints <= 0)
+                bool hasStamina = this.MyPeep.DepleteStamina(1);
+                if (!hasStamina)
                 {
                     return false;
                 }
@@ -69,20 +68,23 @@ public class TaskWalk : Task
 
         float closeGap = 0.05f;
         float cen = 0.5f;
-        Vector2 movePos = new Vector2(this.nextStep.posX + cen, this.nextStep.posY + cen);
-        float dist = Vector2.Distance(this.MyPeep.pos, movePos);
+
+        Vector2 targetPos = new Vector2(this.nextStep.posX + cen, this.nextStep.posY + cen);
+        targetPos = RetrieveFacingPositionOnRoad(targetPos, 0.25f);
+
+        float dist = Vector2.Distance(this.MyPeep.pos, targetPos);
         if (dist < 0.5f)
         {
             this.MyPeep.OnTopOfTile = this.nextStep;
         }
         if (dist <= closeGap)
         {
-            this.MyPeep.pos = movePos;
+            this.MyPeep.pos = targetPos;
             this.curStep = nextStep;
         }
         else
         {
-            this.MyPeep.pos = GlobalMethods.Ease((Vector2)this.MyPeep.transform.position, movePos, 0.1f);
+            this.MyPeep.pos = GlobalMethods.Ease((Vector2)this.MyPeep.transform.position, targetPos, 0.1f);
         }
         return true;
     }
@@ -108,7 +110,31 @@ public class TaskWalk : Task
         {
             this.MyPeep.SetDirection(Peep.Direction.Left);
         }
+    }
 
+    public Vector2 RetrieveFacingPositionOnRoad(Vector2 target, float amount)
+    {
+        Vector2 newTarget = target;
+        CodeTile cur = this.curStep;
+        CodeTile next = this.nextStep;
+
+        if (next == cur.TileAbove)
+        {
+            newTarget.x += amount;
+        }
+        else if (next == cur.TileRight)
+        {
+            newTarget.y -= amount;
+        }
+        else if (next == cur.TileBelow)
+        {
+            newTarget.x -= amount;
+        }
+        else if (next == cur.TileLeft)
+        {
+            newTarget.y += amount;
+        }
+        return newTarget;
     }
 
 }

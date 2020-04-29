@@ -1,7 +1,7 @@
 COLORTOOL v1.0
 SECTION PALETTE 319
 #807b7a #8b827f #9b8c87 #ac9890 #bda499 #b49055 #b19e2e #b58127 #b76121 #b9451d #adb834 #967847 #7c654b #464762 #3d3d55 #323346 #1b2447 #2d1a1f #0e0c0c #1e1215 #111323 #1a1922 #161c36 #272736 #343231 #30331d #33291e #3a2128 #462730 #512d38 #4a3b22 #4f402f #4b502c #524f4e #67543e #745d36 #61683a #696c4d #6b6665 #747364
-SECTION DOCUMENT 76765
+SECTION DOCUMENT 80336
 {
  "id": "15873538222223834889",
  "filepath": "C:/GithubRepos/AemonsNookU/Resources/BuildingColors.clrpal",
@@ -15,12 +15,12 @@ SECTION DOCUMENT 76765
    ]
   },
   "draw_grid": false,
-  "zoom": -0.965139,
+  "zoom": -0.75,
   "scroll": {
    "_t": "Vector2",
    "value": [
-    -284.541718,
-    -247.6875
+    63.958282,
+    41.8125
    ]
   },
   "old_path_root": "C:/GithubRepos/AemonsNookU/Resources"
@@ -33,8 +33,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -242,
-     -21
+     -96,
+     142
     ]
    },
    "size": {
@@ -48,7 +48,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -71,7 +71,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -118,8 +118,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -206,
-     -57
+     -58,
+     110
     ]
    },
    "size": {
@@ -133,7 +133,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -156,7 +156,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -203,8 +203,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -240,
-     4
+     -94,
+     172
     ]
    },
    "size": {
@@ -218,7 +218,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -241,7 +241,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -288,8 +288,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -212,
-     -34
+     -56,
+     131
     ]
    },
    "size": {
@@ -303,7 +303,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -326,7 +326,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -373,8 +373,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -47,
-     139
+     188,
+     10
     ]
    },
    "size": {
@@ -388,7 +388,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -458,8 +458,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -44,
-     161
+     194,
+     -2
     ]
    },
    "size": {
@@ -473,7 +473,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -543,8 +543,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -43,
-     181
+     185,
+     43
     ]
    },
    "size": {
@@ -558,7 +558,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -628,8 +628,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -44,
-     204
+     158,
+     7
     ]
    },
    "size": {
@@ -643,7 +643,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Bath/Bath04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -713,8 +713,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     261,
-     366
+     309,
+     370
     ]
    },
    "size": {
@@ -724,11 +724,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -751,7 +751,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -782,7 +782,7 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 0.3013,
+   "zoom": -0.749999,
    "scroll": {
     "_t": "Vector2",
     "value": [
@@ -798,8 +798,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     264,
-     341
+     329,
+     398
     ]
    },
    "size": {
@@ -809,11 +809,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -836,7 +836,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -883,8 +883,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     273,
-     318
+     333,
+     411
     ]
    },
    "size": {
@@ -894,11 +894,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -921,7 +921,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -968,8 +968,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     274,
-     293
+     313,
+     377
     ]
    },
    "size": {
@@ -979,11 +979,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Blacksmith/Blacksmith04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1006,7 +1006,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1053,8 +1053,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     100,
-     419
+     -62,
+     370
     ]
    },
    "size": {
@@ -1068,7 +1068,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1138,8 +1138,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     111,
-     425
+     -56,
+     393
     ]
    },
    "size": {
@@ -1149,11 +1149,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 3,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1176,7 +1176,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1223,8 +1223,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     108,
-     402
+     -68,
+     412
     ]
    },
    "size": {
@@ -1238,7 +1238,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1261,7 +1261,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1308,8 +1308,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     109,
-     376
+     -57,
+     382
     ]
    },
    "size": {
@@ -1323,7 +1323,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Butcher/Butcher04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1346,7 +1346,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1393,8 +1393,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     66,
-     180
+     265,
+     122
     ]
    },
    "size": {
@@ -1408,7 +1408,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1478,8 +1478,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     96,
-     159
+     306,
+     90
     ]
    },
    "size": {
@@ -1493,7 +1493,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1516,7 +1516,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1547,12 +1547,12 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 0,
+   "zoom": -0.789938,
    "scroll": {
     "_t": "Vector2",
     "value": [
-     0,
-     0
+     5.333332,
+     15.700005
     ]
    }
   },
@@ -1563,8 +1563,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     64,
-     132
+     276,
+     114
     ]
    },
    "size": {
@@ -1578,7 +1578,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1601,7 +1601,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1648,8 +1648,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     90,
-     105
+     310,
+     75
     ]
    },
    "size": {
@@ -1663,7 +1663,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Chapel/Chapel04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1686,7 +1686,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -1717,12 +1717,12 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 2.912129,
+   "zoom": -1.75,
    "scroll": {
     "_t": "Vector2",
     "value": [
-     -2.285711,
-     -11.285717
+     4.009523,
+     -20.700005
     ]
    }
   },
@@ -1733,8 +1733,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     259,
-     126
+     320,
+     94
     ]
    },
    "size": {
@@ -1744,11 +1744,11 @@ SECTION DOCUMENT 76765
      142
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1818,8 +1818,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     265,
-     74
+     294,
+     73
     ]
    },
    "size": {
@@ -1829,11 +1829,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/cloth01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1903,8 +1903,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     264,
-     147
+     311,
+     128
     ]
    },
    "size": {
@@ -1914,11 +1914,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -1972,12 +1972,12 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 0.25,
+   "zoom": -1.75,
    "scroll": {
     "_t": "Vector2",
     "value": [
-     -3.489283,
-     -9.300003
+     -0.989283,
+     -5.800003
     ]
    }
   },
@@ -1988,8 +1988,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     261,
-     102
+     316,
+     156
     ]
    },
    "size": {
@@ -1999,11 +1999,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 0,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Cloth/Cloth04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2073,8 +2073,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -271,
-     220
+     -262,
+     401
     ]
    },
    "size": {
@@ -2084,11 +2084,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 3,
+   "anchor": 1,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2111,7 +2111,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2158,8 +2158,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -239,
-     180
+     -236,
+     375
     ]
    },
    "size": {
@@ -2169,11 +2169,11 @@ SECTION DOCUMENT 76765
      205
     ]
    },
-   "anchor": 3,
+   "anchor": 1,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2196,7 +2196,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2243,8 +2243,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -269,
-     241
+     -266,
+     379
     ]
    },
    "size": {
@@ -2254,11 +2254,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 3,
+   "anchor": 1,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2281,7 +2281,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2328,8 +2328,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -238,
-     201
+     -231,
+     347
     ]
    },
    "size": {
@@ -2339,11 +2339,11 @@ SECTION DOCUMENT 76765
      205
     ]
    },
-   "anchor": 3,
+   "anchor": 1,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Inn/Inn04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2366,7 +2366,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2413,8 +2413,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -245,
-     417
+     138,
+     392
     ]
    },
    "size": {
@@ -2428,7 +2428,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/Scribe01Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2451,7 +2451,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2498,8 +2498,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -248,
-     419
+     134,
+     408
     ]
    },
    "size": {
@@ -2513,7 +2513,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/Scribe02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2536,7 +2536,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2583,8 +2583,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -250,
-     385
+     142,
+     382
     ]
    },
    "size": {
@@ -2598,7 +2598,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/Scribe03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2621,7 +2621,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2668,22 +2668,22 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -249,
-     358
+     121,
+     360
     ]
    },
    "size": {
     "_t": "Vector2",
     "value": [
-     136,
-     141
+     153,
+     163
     ]
    },
    "anchor": 1,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/scribe04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Scribe/Scribe04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2706,7 +2706,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2753,8 +2753,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -107,
-     397
+     303,
+     140
     ]
    },
    "size": {
@@ -2764,11 +2764,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables1.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/Stables1Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2791,7 +2791,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2822,12 +2822,12 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 3.633655,
+   "zoom": -1.75,
    "scroll": {
     "_t": "Vector2",
     "value": [
-     0.545235,
-     17.35833
+     -0.038101,
+     -4.699997
     ]
    }
   },
@@ -2838,8 +2838,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -81,
-     360
+     330,
+     124
     ]
    },
    "size": {
@@ -2849,11 +2849,11 @@ SECTION DOCUMENT 76765
      205
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables2.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/Stables2Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2876,7 +2876,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2923,8 +2923,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -106,
-     370
+     299,
+     148
     ]
    },
    "size": {
@@ -2934,11 +2934,11 @@ SECTION DOCUMENT 76765
      141
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables3.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/Stables3Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -2961,7 +2961,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -2992,7 +2992,7 @@ SECTION DOCUMENT 76765
      }
     ]
    },
-   "zoom": 0,
+   "zoom": -0.75,
    "scroll": {
     "_t": "Vector2",
     "value": [
@@ -3008,8 +3008,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -81,
-     336
+     323,
+     129
     ]
    },
    "size": {
@@ -3019,11 +3019,11 @@ SECTION DOCUMENT 76765
      205
     ]
    },
-   "anchor": 1,
+   "anchor": 2,
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/stables4.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Stables/Stables4Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -3046,7 +3046,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -3093,8 +3093,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -240,
-     158
+     -118,
+     196
     ]
    },
    "size": {
@@ -3178,8 +3178,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -237,
-     137
+     -102,
+     165
     ]
    },
    "size": {
@@ -3263,8 +3263,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -237,
-     82
+     -82,
+     107
     ]
    },
    "size": {
@@ -3348,8 +3348,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -239,
-     190
+     -84,
+     139
     ]
    },
    "size": {
@@ -3433,8 +3433,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -79,
-     186
+     85,
+     182
     ]
    },
    "size": {
@@ -3448,7 +3448,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern01.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern01Recolor.png",
    "factors": {
     "lum": 6.2,
     "vib": 1,
@@ -3518,8 +3518,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -81,
-     137
+     88,
+     153
     ]
    },
    "size": {
@@ -3533,7 +3533,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern02.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern02Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -3603,8 +3603,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -80,
-     162
+     88,
+     110
     ]
    },
    "size": {
@@ -3618,7 +3618,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern03.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern03Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,
@@ -3641,7 +3641,7 @@ SECTION DOCUMENT 76765
     "blue": 0.5
    },
    "color_mapping_mode": "Basic",
-   "color_mapping_enabled": false,
+   "color_mapping_enabled": true,
    "smooth_transitions": false,
    "effects": {
     "_t": "EffectStack",
@@ -3688,8 +3688,8 @@ SECTION DOCUMENT 76765
    "position": {
     "_t": "Vector2",
     "value": [
-     -78,
-     111
+     89,
+     95
     ]
    },
    "size": {
@@ -3703,7 +3703,7 @@ SECTION DOCUMENT 76765
    "visible": true,
    "initialized": true,
    "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern04.png",
-   "export_path": "",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Tavern/Tavern04Recolor.png",
    "factors": {
     "lum": 6,
     "vib": 1,

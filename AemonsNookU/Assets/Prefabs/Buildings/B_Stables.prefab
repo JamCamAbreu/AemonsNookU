@@ -96,16 +96,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesTall: 2
   tilesWide: 3
-  Type: 8
-  Name: 
-  Description: 
   Rotation: 0
   Icon: {fileID: 21300000, guid: caea8b4cc7be0544195eac8e17d8deb1, type: 3}
-  normal: {fileID: 21300000, guid: aef438578c6beb04fab9a77772b5ae2f, type: 3}
-  clockOne: {fileID: 21300000, guid: f9d59a7bbc0a10c468576440b94667a4, type: 3}
-  clockTwo: {fileID: 21300000, guid: 4f5835cbc0683694d884ebc08ed5306b, type: 3}
-  clockThree: {fileID: 21300000, guid: a735e93db8586504da14e7f84a0eeb90, type: 3}
+  normal: {fileID: 21300000, guid: 3acb4840c8972fc49b7b6f0f911fbecd, type: 3}
+  clockOne: {fileID: 21300000, guid: 77b79652a1b4c3446917c2cc6cb2aa30, type: 3}
+  clockTwo: {fileID: 21300000, guid: 8453f633697676e4dbe0a075bf67f45c, type: 3}
+  clockThree: {fileID: 21300000, guid: 0cc5eb1a325cb704eae3c45804cef408, type: 3}
   originX: 0
   originY: 0
-  Capacity: 0
   Occupants: []

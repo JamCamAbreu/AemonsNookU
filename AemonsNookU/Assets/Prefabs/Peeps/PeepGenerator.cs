@@ -41,7 +41,7 @@ public class PeepGenerator : MonoBehaviour
         CreationAlarmResetMin = 60 * 2; // get from level
         CreationAlarmResetMax = 60 * 6; // get from level
         CreationAlarm = CreationAlarmResetMax;
-        MaxPeeps = 35; // get from level
+        //MaxPeeps = 35; // get from level
     }
 
     // Update is called once per frame
@@ -60,9 +60,22 @@ public class PeepGenerator : MonoBehaviour
     }
 
 
-    public CodeTile GetRandomRoadTile()
+    public CodeTile GetRandomRoadTile(CodeTile curTile)
     {
-        return MyWorld.GetRandomRoadTile();
+        int tries = 30;
+        CodeTile nextTile = MyWorld.GetRandomRoadTile();
+        while (tries > 0 && nextTile.posX == curTile.posX && nextTile.posY == curTile.posY)
+        {
+            nextTile = MyWorld.GetRandomRoadTile();
+            tries--;
+        }
+
+        if (tries <= 0)
+        {
+            Debug.Log("Unable to find other path");
+        }
+
+        return nextTile;
     }
     public CodeTile GetRandomExitTile()
     {
@@ -85,13 +98,39 @@ public class PeepGenerator : MonoBehaviour
             peep.OnTopOfTile = startTile;
             peep.pos = new Vector3(startTile.posX + 0.5f, startTile.posY + 0.5f, 1);
 
-            CodeTile ranRoad = GetRandomRoadTile();
+            CodeTile ranRoad = GetRandomRoadTile(startTile);
 
-            peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
+            // Put this into the level config later:
+            // Also make this a variable in the world that can change:
+            int passingByChance = 40; // out of 100
 
-            // Create notification to user
-            string arrivalMessage = $"{peep.FirstName} {peep.SirName} has arrived!";
-            notificationCanvas.AddNotification(Notification.Type.peepArrival, arrivalMessage);
+            if (IsPassingBy(passingByChance))
+            {
+
+                CodeTile ranExitTile = GetRandomExitTile();
+                int tries = 10;
+                while (ranExitTile.posX == startTile.posX && ranExitTile.posY == startTile.posY && tries > 0)
+                {
+                    ranExitTile = GetRandomExitTile();
+                    tries--;
+                }
+
+                if (AllRoadTiles.Contains(ranExitTile))
+                {
+                    peep.MyTasks.Push(new TaskLeave(peep));
+                    peep.MyTasks.Push(new TaskWalk(peep, ranExitTile, AllRoadTiles, true));
+                }
+
+                string arrivalMessage = $"{peep.FirstName} {peep.SirName} arrived and is just passing by.";
+                notificationCanvas.AddNotification(Notification.Type.peepArrival, arrivalMessage);
+            }
+            else
+            {
+                peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
+
+                string arrivalMessage = $"{peep.FirstName} {peep.SirName} has arrived!";
+                notificationCanvas.AddNotification(Notification.Type.peepArrival, arrivalMessage);
+            }
 
             return peep;
         }
@@ -101,9 +140,23 @@ public class PeepGenerator : MonoBehaviour
         }
     }
 
+    public bool IsPassingBy(int passingByChance)
+    {
+        int roll = Random.Range(0, 100);
+        if (roll <= passingByChance)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
     public bool CheckNecessaryTasks(Peep peep)
     {
-        if (peep.FatiguePoints <= 0)
+        if (peep.Stamina <= 0)
         {
             notificationCanvas.AddNotification(Notification.Type.peepDeparture, $"{peep.FirstName} {peep.SirName} is tired, going home.");
             CodeTile ranExitTile = GetRandomExitTile();
@@ -125,6 +178,30 @@ public class PeepGenerator : MonoBehaviour
     public void GenerateNextTask(Peep peep)
     {
         bool hasTask = CheckNecessaryTasks(peep);
+
+
+        // Building occupy test:
+        if (!hasTask)
+        {
+            List<CodeTile> entrances = this.MyWorld.RetrieveBuildingEntranceTiles(); // later use the specific entrance search
+            if (entrances.Count > 0)
+            {
+                int index = Random.Range(0, entrances.Count);
+                CodeTile entrance = entrances[index];
+                Building targetBuilding = entrance.ParentBuilding;
+
+
+                string message = $"{peep.FirstName} is heading to the {targetBuilding.Name}";
+                peep.notificationCanvas.AddNotification(Notification.Type.peepArrival, message);
+
+                peep.MyTasks.Push(new TaskOccupyBuilding(peep, targetBuilding));
+                peep.MyTasks.Push(new TaskWalk(peep, entrance, this.MyWorld.RetrieveAllRoadTiles(), false));
+
+                hasTask = true;
+            }
+        }
+
+
 
         if (!hasTask)
         {
@@ -158,109 +235,109 @@ public class PeepGenerator : MonoBehaviour
     #region GENERATE TASKS BASED ON TYPE Of PEEP
     public void GenerateTaskChild(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskHomeless(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskThief(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskFarmer(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskTrader(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskBard(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskMonk(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskNun(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskPriest(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskBishop(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskKnight(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskQuester(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskForeigner(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskWitch(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskElder(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskWizard(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskLady(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
 
     public void GenerateTaskKing(Peep peep)
     {
-        CodeTile ranRoad = GetRandomRoadTile();
+        CodeTile ranRoad = GetRandomRoadTile(peep.OnTopOfTile);
         peep.MyTasks.Push(new TaskWalk(peep, ranRoad, AllRoadTiles, false));
     }
     #endregion

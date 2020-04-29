@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public abstract class Building : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public abstract class Building : MonoBehaviour
 
     public List<CodeTile> TilesUnderneath = new List<CodeTile>();
     public List<CodeTile> Entrances = new List<CodeTile>();
+    public SignPost sign;
 
     public Sprite Icon;
 
@@ -34,7 +36,28 @@ public abstract class Building : MonoBehaviour
     public int originX;
     public int originY;
 
-    public List<Peep> Occupants = new List<Peep>();
+
+
+    private List<Peep> Occupants = new List<Peep>();
+    public void AddOccupant(Peep p)
+    {
+        Occupants.Add(p);
+    }
+    public void RemoveOccupant(Peep p)
+    {
+        Occupants.Remove(p);
+    }
+    public List<Peep> EmptyOccupants()
+    {
+        int numBefore = this.Occupants.Count;
+        List<Peep> returnList = new List<Peep>(this.Occupants);
+
+        this.Occupants.Clear();
+
+        Assert.IsTrue(returnList.Count == numBefore, "Error in Building.cs - Check how duplicating C# lists work.");
+        return returnList;
+    }
+
 
     public SpriteRenderer MySpriteRend
     {

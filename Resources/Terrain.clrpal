@@ -1,0 +1,394 @@
+COLORTOOL v1.0
+SECTION PALETTE 63
+#1d3004 #233510 #2c3d1d #344527 #3c4d30 #0d0b0b #111809 #172507
+SECTION DOCUMENT 6344
+{
+ "id": "15878211412562647615",
+ "filepath": "",
+ "settings": {
+  "snap_to_grid": true,
+  "grid_size": {
+   "_t": "Vector2",
+   "value": [
+    16,
+    16
+   ]
+  },
+  "draw_grid": false,
+  "zoom": 1.326796,
+  "scroll": {
+   "_t": "Vector2",
+   "value": [
+    -123.06192,
+    -172.304764
+   ]
+  },
+  "old_path_root": "C:\\Users\\coolc\\OneDrive\\Documents"
+ },
+ "objects": [
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0001",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     94,
+     -2
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     438,
+     403
+    ]
+   },
+   "anchor": 3,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Terrain/Grass/Grass-one.png",
+   "export_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Terrain/Grass/Grass-oneRecolor.png",
+   "factors": {
+    "lum": 10,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1.32,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Dynamic",
+   "color_mapping_enabled": true,
+   "smooth_transitions": true,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -2.36314,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     4.371424,
+     3.577383
+    ]
+   }
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0002",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.269457,
+     0.028169,
+     0.023625
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -199,
+     -151
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "RefImage",
+   "_v": 2,
+   "id": "Img0003",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -64,
+     222
+    ]
+   },
+   "size": {
+    "_t": "Vector2",
+    "value": [
+     447,
+     309
+    ]
+   },
+   "anchor": 1,
+   "visible": true,
+   "initialized": true,
+   "image_path": "C:/GithubRepos/AemonsNookU/AemonsNookU/Assets/Sprites/Buildings/Archery/Archery01Recolor.png",
+   "export_path": "",
+   "factors": {
+    "lum": 6,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "multipliers": {
+    "lum": 1,
+    "vib": 1,
+    "red": 1,
+    "green": 1,
+    "blue": 1
+   },
+   "midpoints": {
+    "lum": 0.5,
+    "vib": 0.5,
+    "red": 0.5,
+    "green": 0.5,
+    "blue": 0.5
+   },
+   "color_mapping_mode": "Basic",
+   "color_mapping_enabled": false,
+   "smooth_transitions": false,
+   "effects": {
+    "_t": "EffectStack",
+    "_v": 0,
+    "list": [
+     {
+      "_t": "ResizeImage",
+      "_v": 0,
+      "enabled": false,
+      "mode": "width",
+      "width": 64,
+      "height": 64,
+      "scale": 0.5
+     },
+     {
+      "_t": "DitherOverlay",
+      "_v": 0,
+      "enabled": false,
+      "opacity": 0.2,
+      "pattern": "res://Shaders/dither4x4.png"
+     },
+     {
+      "_t": "RemoveNoise",
+      "_v": 0,
+      "enabled": false,
+      "threshold": 0.5,
+      "strength": 1
+     }
+    ]
+   },
+   "zoom": -1.249999,
+   "scroll": {
+    "_t": "Vector2",
+    "value": [
+     4.783337,
+     8
+    ]
+   }
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr0008",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0,
+     0.000678,
+     0.003491
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -199,
+     -215
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp0009",
+   "from": "Clr0008",
+   "to": "Clr0002",
+   "steps": 2,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "_t": "ColorShard",
+   "_v": 1,
+   "id": "Clr000A",
+   "color": {
+    "_t": "Vector3",
+    "value": [
+     0.27401,
+     0.04507,
+     0.065464
+    ]
+   },
+   "color_space": "HCY",
+   "label": "",
+   "position": {
+    "_t": "Vector2",
+    "value": [
+     -199,
+     -103
+    ]
+   },
+   "index": 0,
+   "locked_index": false
+  },
+  {
+   "_t": "ColorRamp",
+   "_v": 2,
+   "id": "Ramp000B",
+   "from": "Clr0002",
+   "to": "Clr000A",
+   "steps": 3,
+   "color_space": "Linear RGB",
+   "label": "",
+   "locked_index": false,
+   "index": 0,
+   "flipped": false,
+   "gamma": 1.4,
+   "curves": [
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    },
+    {
+     "_t": "CurveShape",
+     "_v": 0,
+     "type": 1,
+     "exponent": 1,
+     "threshold": 0.5,
+     "amplitude": 0.2,
+     "frequency": 3,
+     "offset_start": 0,
+     "offset_end": 0,
+     "mapping": [
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ ]
+}
