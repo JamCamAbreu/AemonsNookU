@@ -1,0 +1,18 @@
+
+Resources:
+
+	Wood
+	Copper
+	Salt
+	Gold
+	
+
+
+
+Meta:
+	Influence
+		- Allows you to unlock new territories
+		
+	Experience
+		- Allows you to unlock new cards
+		- Allows you to upgrade cards

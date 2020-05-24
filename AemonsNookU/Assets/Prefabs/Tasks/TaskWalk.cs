@@ -10,6 +10,7 @@ public class TaskWalk : Task
     public List<CodeTile> AllRoads { get; set; }
     public Stack<CodeTile> MyPath { get; set; }
 
+    public Vector2 prevFacingPos { get; set; }
     public CodeTile curStep { get; set; }
     public CodeTile nextStep { get; set; }
     public bool IgnoresFatigue { get; set; }
@@ -27,6 +28,7 @@ public class TaskWalk : Task
 
         this.curStep = this.StartTile;
         this.nextStep = this.GetNextStep();
+        this.prevFacingPos = this.MyPeep.pos;
 
         this.IgnoresFatigue = ignoresFatigue;
     }
@@ -69,22 +71,40 @@ public class TaskWalk : Task
         float closeGap = 0.05f;
         float cen = 0.5f;
 
-        Vector2 targetPos = new Vector2(this.nextStep.posX + cen, this.nextStep.posY + cen);
-        targetPos = RetrieveFacingPositionOnRoad(targetPos, 0.25f);
+        Vector2 prevPos = new Vector2(this.curStep.posX + cen, this.curStep.posY + cen);
+        Vector2 targetFacingPos = new Vector2(this.nextStep.posX + cen, this.nextStep.posY + cen);
+        targetFacingPos = RetrieveFacingPositionOnRoad(targetFacingPos, 0.25f);
 
-        float dist = Vector2.Distance(this.MyPeep.pos, targetPos);
+        float dist = Vector2.Distance(this.MyPeep.pos, targetFacingPos);
         if (dist < 0.5f)
         {
             this.MyPeep.OnTopOfTile = this.nextStep;
         }
         if (dist <= closeGap)
         {
-            this.MyPeep.pos = targetPos;
+            this.MyPeep.pos = targetFacingPos;
+            this.prevFacingPos = targetFacingPos;
             this.curStep = nextStep;
         }
         else
         {
-            this.MyPeep.pos = GlobalMethods.Ease((Vector2)this.MyPeep.transform.position, targetPos, 0.1f);
+            if (this.MyPeep.WalkType == PeepInfo.WalkType.ease)
+            {
+                this.MyPeep.pos = GlobalMethods.Ease((Vector2)this.MyPeep.transform.position, targetFacingPos, 0.15f / this.MyPeep.WalkSpeed);
+            }
+            else
+            {
+                float dividend = 30.0f * this.MyPeep.WalkSpeed;
+
+                float distX = (targetFacingPos.x - prevFacingPos.x) / dividend;
+                float distY = (targetFacingPos.y - prevFacingPos.y) / dividend;
+
+                float newX = this.MyPeep.pos.x + distX;
+                float newY = this.MyPeep.pos.y + distY;
+
+                this.MyPeep.pos = new Vector2(newX, newY);
+            }
+
         }
         return true;
     }

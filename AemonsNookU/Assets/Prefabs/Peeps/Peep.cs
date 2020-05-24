@@ -44,7 +44,10 @@ public class Peep : MonoBehaviour
     public string SirName;
     public int Age;
     public int Fame;
+    public float WalkSpeed;
+    public PeepInfo.WalkType WalkType;
     public int Stamina; // tasks cost stamina points, points before tired and wants to leave
+
 
     private Animator feetAnimator;
 

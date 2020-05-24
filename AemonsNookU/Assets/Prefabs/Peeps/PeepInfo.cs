@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public static class PeepInfo
 {
+
+    public const float NORMAL_WALK_SPEED = 1.35f;
+
     // 18 total types
     public enum Type
     {
@@ -33,6 +37,14 @@ public static class PeepInfo
         female
     }
 
+    public enum WalkType
+    {
+        smooth = 0,
+        ease,
+        // hop
+        // reverse ease?
+    }
+
     public static void UpdatePeepType(Peep p, Type t)
     {
         p.Type = t;
@@ -42,6 +54,31 @@ public static class PeepInfo
         p.SirName = GenerateSirname(p.Fame);
         p.Stamina = GenerateFatigue(t, p.Sex);
         p.Age = GenerateAge(t);
+        p.WalkSpeed = GenerateWalkSpeed(t, p.Sex, p.Age);
+        p.WalkType = GenerateWalkType(t, p.Sex);
+    }
+
+    private static WalkType GenerateWalkType(Type t, Sex sex)
+    {
+        if (sex == Sex.female)
+        {
+            return WalkType.smooth;
+        }
+        else
+        {
+            return WalkType.ease;
+        }
+    }
+
+    private static float GenerateWalkSpeed(Type t, Sex s, int age)
+    {
+        float calc = NORMAL_WALK_SPEED;
+
+        // for every 10 years, slow down a little:
+        calc += ((float)age)/10.0f * 0.3f;
+        calc += UnityEngine.Random.Range(-0.2f, 0.2f); // a little random
+
+        return calc;
     }
 
     public static int GenerateFatigue(Type t, Sex s)
@@ -53,7 +90,7 @@ public static class PeepInfo
     public static int GenerateAge(Type t)
     {
         // todo
-        return Random.Range(1, 60);
+        return UnityEngine.Random.Range(1, 60);
     }
 
     public static string GenerateFirstName(Sex s)
@@ -86,8 +123,9 @@ public static class PeepInfo
 
     public static Sex GenerateSex(Type t)
     {
+         //int (Sex)UnityEngine.Random.Range(0, 2);
         // todo
-        return Sex.female;
+        return (Sex)UnityEngine.Random.Range(0, 2);
     }
 
 
@@ -140,7 +178,7 @@ public static class PeepInfo
 
     public static string GetRandomName(string[] listNames)
     {
-        int index = Random.Range(0, listNames.Length);
+        int index = UnityEngine.Random.Range(0, listNames.Length);
         return listNames[index];
     }
 

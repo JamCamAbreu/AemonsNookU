@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,6 +28,22 @@ public class GlobalMethods
     public static Vector3 Ease(Vector3 curVal, Vector3 targetVal, float speed)
     {
         return (Vector3)(curVal + (targetVal - curVal) * speed);
+    }
+
+
+    public static Vector2 ConstantEase(Vector2 curVal, Vector2 targetVal, int dividend)
+    {
+        try
+        {
+            Vector2 test = targetVal - curVal;
+            test = test / dividend;
+        }
+        catch (Exception e)
+        {
+
+        }
+
+        return (Vector2)(curVal + ((targetVal - curVal) / dividend));
     }
 
 
